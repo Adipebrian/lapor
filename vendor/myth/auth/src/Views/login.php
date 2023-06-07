@@ -5,14 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="shortcut icon" href="<?= base_url() ?>/assets/img/icon2.png" type="image/x-icon"> -->
 	<title>PT. Andalan Prima Indonesia</title>
-	<!-- Style Css -->
-	<!-- SweetAlert2 -->
 	<link rel="stylesheet" href="<?= base_url() ?>/adminlte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/layout.css">
-	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/login.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/responsive.css">
+	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/login.css">
 </head>
 
 <body>
@@ -65,6 +62,8 @@
 			<div class="btn">
 				<button type="submit" class="btn-primary">Login</button>
 			</div>
+			<!-- <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p> -->
+			<p>Belum Punya Akun? <a href="<?= url_to('register') ?>">Daftar</a></p>
 		</form>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

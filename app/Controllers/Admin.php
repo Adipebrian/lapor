@@ -81,7 +81,6 @@ class Admin extends BaseController
             $this->builder = $this->db->table('auth_groups_users');
             $this->builder->where('user_id', $user);
             $this->builder->update($data);
-            addlog('auth_groups_users', 1, $this->request->getIPAddress(), 'user_id', $group, $result);
             session()->setFlashdata('success', 'Success!');
         } else {
             session()->setFlashdata('failed', 'Failed!');
@@ -121,7 +120,6 @@ class Admin extends BaseController
         $this->builder = $this->db->table('users');
         $this->builder->where('id', $id);
         $this->builder->update($data);
-        addlog('users', 1, $this->request->getIPAddress(), 'id', $id, $result);
         session()->setFlashdata('success', 'Berhasil!');
         return redirect()->to('admin/user');
     }
@@ -135,7 +133,6 @@ class Admin extends BaseController
         $this->builder = $this->db->table('users');
         $this->builder->where('id', $id);
         $this->builder->update($data);
-        addlog('users', 1, $this->request->getIPAddress(), 'id', $id, $result);
         session()->setFlashdata('success', 'Berhasil!');
         return redirect()->to('admin/user');
     }
@@ -145,7 +142,6 @@ class Admin extends BaseController
         $this->builder = $this->db->table('users');
         $this->builder->where('id', $id);
         $this->builder->update(['deleted_at' => $this->time, 'active' => 0]);
-        addlog('users', 0, $this->request->getIPAddress(), 'id', $id);
         session()->setFlashdata('success', 'Berhasil Dihapus!');
         return redirect()->to('admin/user');
     }
@@ -173,7 +169,6 @@ class Admin extends BaseController
         $this->builder = $this->db->table('users');
         $this->builder->where('id', $id);
         $this->builder->update($data);
-        addlog('users', 1, $this->request->getIPAddress(), 'id', $id, $result);
         session()->setFlashdata('success', 'Edit User Success!');
         return redirect()->to('admin/user');
     }
@@ -246,7 +241,6 @@ class Admin extends BaseController
                 $this->builder = $this->db->table('auth_groups');
                 $this->builder->where('id', $id_g);
                 $this->builder->update($data);
-                addlog('auth_groups', 1, $this->request->getIPAddress(), 'id', $id_g, $result);
                 session()->setFlashdata('success', 'Success!');
             } else {
                 session()->setFlashdata('failed', 'Failed!');
@@ -265,7 +259,6 @@ class Admin extends BaseController
                 $this->builder = $this->db->table('auth_permissions');
                 $this->builder->where('id', $id_p);
                 $this->builder->update($data);
-                addlog('auth_permissions', 1, $this->request->getIPAddress(), 'id', $id_p, $result);
                 session()->setFlashdata('success', 'Success!');
             } else {
                 session()->setFlashdata('failed', 'Failed!');
@@ -295,7 +288,6 @@ class Admin extends BaseController
             } else {
                 $this->builder = $this->db->table('auth_groups');
                 $this->builder->insert($data);
-                // addlog('auth_groups', 1, $this->request->getIPAddress(), $data);
                 session()->setFlashdata('success', 'Success!');
             }
         } else {
@@ -313,7 +305,6 @@ class Admin extends BaseController
             } else {
                 $this->builder = $this->db->table('auth_permissions');
                 $this->builder->insert($data);
-                // addlog('auth_permissions', 1, $this->request->getIPAddress(), $data);
                 session()->setFlashdata('success', 'Success!');
             }
         }
@@ -325,13 +316,11 @@ class Admin extends BaseController
         $id_p = $this->mRequest->getVar('id_p');
 
         if ($id_g) {
-            addlog('auth_groups', 0, $this->request->getIPAddress(), 'id', $id_g);
             $this->builder = $this->db->table('auth_groups');
             $this->builder->where('id', $id_g);
             $this->builder->delete();
             session()->setFlashdata('success', 'Success!');
         } else {
-            addlog('auth_permissions', 0, $this->request->getIPAddress(), 'id', $id_p);
             $this->builder = $this->db->table('auth_permissions');
             $this->builder->where('id', $id_p);
             $this->builder->delete();
@@ -394,7 +383,6 @@ class Admin extends BaseController
             $this->builder = $this->db->table('auth_groups_permissions');
             $this->builder->where('group_id', $group);
             $this->builder->update($data);
-            addlog('auth_groups_permissions', 1, $this->request->getIPAddress(), 'group_id', $group, $result);
             session()->setFlashdata('success', 'Success!');
         } else {
             session()->setFlashdata('failed', 'Failed!');

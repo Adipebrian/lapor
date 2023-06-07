@@ -92,8 +92,8 @@ $routes->group('user', ['filter' => 'role:user,admin'], static function ($routes
     $routes->post('update/(:any)', 'User::update');
 });
 $routes->group('lapor', ['filter' => 'role:user,admin'], static function ($routes) {
-    $routes->get('data', 'User::data');
-    // $routes->post('store', 'User::store');
+    $routes->get('data', 'Lapor::data');
+    $routes->post('store', 'Lapor::store');
 });
 
 
