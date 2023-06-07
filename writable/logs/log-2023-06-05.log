@@ -1,0 +1,27 @@
+CRITICAL - 2023-06-05 20:51:00 --> Undefined variable $nama
+in APPPATH\Controllers\Lapor.php on line 18.
+ 1 APPPATH\Controllers\Lapor.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'APPPATH\\Controllers\\Lapor.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 20:51:03 --> Undefined variable $nama
+in APPPATH\Controllers\Lapor.php on line 18.
+ 1 APPPATH\Controllers\Lapor.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'APPPATH\\Controllers\\Lapor.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:58:23 --> Unsupported operand types: stdClass + int
+in APPPATH\Controllers\Lapor.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:59:56 --> substr(): Argument #1 ($string) must be of type string, stdClass given
+in APPPATH\Controllers\Lapor.php on line 33.
+ 1 APPPATH\Controllers\Lapor.php(33): substr(Object(stdClass), -1, 4)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()

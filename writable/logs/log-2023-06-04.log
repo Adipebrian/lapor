@@ -1,0 +1,347 @@
+ERROR - 2023-06-04 14:44:32 --> mysqli_sql_exception: Table 'lapor.tblock' doesn't exist in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Admin.php(440): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Admin->approve()
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 14:44:32 --> Table 'lapor.tblock' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `tblock`
+WHERE `sts` = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblock`
+WHERE `sts` = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblock`
+WHERE `sts` = 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblock`
+WHERE `sts` = :sts:', [...], false)
+ 5 APPPATH\Controllers\Admin.php(440): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->approve()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 14:44:43 --> mysqli_sql_exception: Table 'lapor.tblock' doesn't exist in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Admin.php(440): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Admin->approve()
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 14:44:43 --> Table 'lapor.tblock' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `tblock`
+WHERE `sts` = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblock`
+WHERE `sts` = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblock`
+WHERE `sts` = 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblock`
+WHERE `sts` = :sts:', [...], false)
+ 5 APPPATH\Controllers\Admin.php(440): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->approve()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-04 14:45:22 --> mysqli_sql_exception: Table 'lapor.tbdn' doesn't exist in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT `d`.`nok...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`nok...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`nok...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`nok...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\User.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\User->index()
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-04 14:45:22 --> Table 'lapor.tbdn' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT `d`.`noklaim`, `d`.`tglklaim`, `d`.`nodn`, `j`.`jns`, `s`.`NMSUPP` as `nmsupp`, `d`.`qty1`, `d`.`qty2`, `d`.`total`, (select ifnull(sum(qty1), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty1_real, (select ifnull(sum(qty2), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty2_real, (select ifnull(sum(jumlah), 0) from tbreal where tbreal.noklaim=d.noklaim) as t_real, (select ifnull(sum(qty1), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty1_adj, (select ifnull(sum(qty2), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty2_adj, (select ifnull(sum(adj), 0) from tbadj where tbadj.noklaim=d.noklaim) as t_adj, `d`.`sts`, `d`.`deleteby`, `t`.`judul`
+FROM `tbdn` `d`
+LEFT JOIN `tbdn_d` `b` ON `b`.`noklaim` = `d`.`noklaim`
+LEFT JOIN `tbsurat` `t` ON `t`.`nomor` = `b`.`nosrt`
+LEFT JOIN `tbjns` `j` ON `j`.`kdjns` = `d`.`jns`
+LEFT JOIN `tbsupp` `s` ON `s`.`KDSUPP` = `d`.`kdsupp`
+WHERE `d`.`sts` < 5
+AND `d`.`deleteby` IS NULL
+GROUP BY `d`.`noklaim`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`noklaim`, `d`.`tglklaim`, `d`.`nodn`, `j`.`jns`, `s`.`NMSUPP` as `nmsupp`, `d`.`qty1`, `d`.`qty2`, `d`.`total`, (select ifnull(sum(qty1), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty1_real, (select ifnull(sum(qty2), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty2_real, (select ifnull(sum(jumlah), 0) from tbreal where tbreal.noklaim=d.noklaim) as t_real, (select ifnull(sum(qty1), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty1_adj, (select ifnull(sum(qty2), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty2_adj, (select ifnull(sum(adj), 0) from tbadj where tbadj.noklaim=d.noklaim) as t_adj, `d`.`sts`, `d`.`deleteby`, `t`.`judul`
+FROM `tbdn` `d`
+LEFT JOIN `tbdn_d` `b` ON `b`.`noklaim` = `d`.`noklaim`
+LEFT JOIN `tbsurat` `t` ON `t`.`nomor` = `b`.`nosrt`
+LEFT JOIN `tbjns` `j` ON `j`.`kdjns` = `d`.`jns`
+LEFT JOIN `tbsupp` `s` ON `s`.`KDSUPP` = `d`.`kdsupp`
+WHERE `d`.`sts` < 5
+AND `d`.`deleteby` IS NULL
+GROUP BY `d`.`noklaim`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`noklaim`, `d`.`tglklaim`, `d`.`nodn`, `j`.`jns`, `s`.`NMSUPP` as `nmsupp`, `d`.`qty1`, `d`.`qty2`, `d`.`total`, (select ifnull(sum(qty1), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty1_real, (select ifnull(sum(qty2), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty2_real, (select ifnull(sum(jumlah), 0) from tbreal where tbreal.noklaim=d.noklaim) as t_real, (select ifnull(sum(qty1), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty1_adj, (select ifnull(sum(qty2), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty2_adj, (select ifnull(sum(adj), 0) from tbadj where tbadj.noklaim=d.noklaim) as t_adj, `d`.`sts`, `d`.`deleteby`, `t`.`judul`
+FROM `tbdn` `d`
+LEFT JOIN `tbdn_d` `b` ON `b`.`noklaim` = `d`.`noklaim`
+LEFT JOIN `tbsurat` `t` ON `t`.`nomor` = `b`.`nosrt`
+LEFT JOIN `tbjns` `j` ON `j`.`kdjns` = `d`.`jns`
+LEFT JOIN `tbsupp` `s` ON `s`.`KDSUPP` = `d`.`kdsupp`
+WHERE `d`.`sts` < 5
+AND `d`.`deleteby` IS NULL
+GROUP BY `d`.`noklaim`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`noklaim`, `d`.`tglklaim`, `d`.`nodn`, `j`.`jns`, `s`.`NMSUPP` as `nmsupp`, `d`.`qty1`, `d`.`qty2`, `d`.`total`, (select ifnull(sum(qty1), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty1_real, (select ifnull(sum(qty2), 0) from tbreal where tbreal.noklaim=d.noklaim) as qty2_real, (select ifnull(sum(jumlah), 0) from tbreal where tbreal.noklaim=d.noklaim) as t_real, (select ifnull(sum(qty1), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty1_adj, (select ifnull(sum(qty2), 0) from tbadj where tbadj.noklaim=d.noklaim) as qty2_adj, (select ifnull(sum(adj), 0) from tbadj where tbadj.noklaim=d.noklaim) as t_adj, `d`.`sts`, `d`.`deleteby`, `t`.`judul`
+FROM `tbdn` `d`
+LEFT JOIN `tbdn_d` `b` ON `b`.`noklaim` = `d`.`noklaim`
+LEFT JOIN `tbsurat` `t` ON `t`.`nomor` = `b`.`nosrt`
+LEFT JOIN `tbjns` `j` ON `j`.`kdjns` = `d`.`jns`
+LEFT JOIN `tbsupp` `s` ON `s`.`KDSUPP` = `d`.`kdsupp`
+WHERE `d`.`sts` < :d.sts:
+AND `d`.`deleteby` IS NULL
+GROUP BY `d`.`noklaim`', [...], false)
+ 5 APPPATH\Controllers\User.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:48:06 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/index', [], true)
+ 9 APPPATH\Controllers\Admin.php(35): view('admin/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:51:54 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/index', [], true)
+ 9 APPPATH\Controllers\Admin.php(35): view('admin/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:52:30 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:52:57 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:53:06 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:53:21 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:53:30 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:53:35 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:54:05 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(156): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:54:13 --> Call to undefined function color()
+in APPPATH\Views\layout\navbar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(151): CodeIgniter\View\View->include('layout/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:55:29 --> Call to undefined function color()
+in APPPATH\Views\layout\sidebar.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/sidebar', null, true)
+ 4 APPPATH\Views\layout\dashboard.php(152): CodeIgniter\View\View->include('layout/sidebar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 8 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(41): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:55:47 --> Call to undefined function gettime()
+in APPPATH\Views\layout\dashboard.php on line 161.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(41): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:55:48 --> Call to undefined function gettime()
+in APPPATH\Views\layout\dashboard.php on line 161.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(41): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:56:21 --> Call to undefined function gettime()
+in APPPATH\Views\layout\dashboard.php on line 161.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(41): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:56:24 --> Call to undefined function gettime()
+in APPPATH\Views\layout\dashboard.php on line 161.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(41): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 14:56:25 --> Call to undefined function gettime()
+in APPPATH\Views\layout\dashboard.php on line 161.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(41): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-04 15:07:59 --> Call to undefined function role()
+in APPPATH\Views\admin\user.php on line 62.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/user', [], true)
+ 4 APPPATH\Controllers\Admin.php(64): view('admin/user', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->user()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()

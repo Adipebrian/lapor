@@ -1,0 +1,22 @@
+CRITICAL - 2023-06-06 23:42:34 --> Undefined property: stdClass::$status
+in APPPATH\Views\lapor\data.php on line 56.
+ 1 APPPATH\Views\lapor\data.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\lapor\\data.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/data', [], true)
+ 5 APPPATH\Controllers\Lapor.php(23): view('lapor/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 23:42:35 --> Undefined property: stdClass::$status
+in APPPATH\Views\lapor\data.php on line 56.
+ 1 APPPATH\Views\lapor\data.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\lapor\\data.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/data', [], true)
+ 5 APPPATH\Controllers\Lapor.php(23): view('lapor/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()

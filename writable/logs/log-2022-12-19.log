@@ -1,0 +1,29 @@
+CRITICAL - 2022-12-19 00:11:39 --> Undefined property: stdClass::$sp
+in APPPATH\Views\admin\approve.php on line 97.
+ 1 APPPATH\Views\admin\approve.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$sp', 'APPPATH\\Views\\admin\\approve.php', 97)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\approve.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/approve', [], true)
+ 5 APPPATH\Controllers\Admin.php(47): view('admin/approve', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->approve()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 00:15:05 --> substr(): Passing null to parameter #1 ($string) of type string is deprecated
+in APPPATH\Helpers\api_helper.php on line 775.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'substr(): Passing null to parameter #1 ($string) of type string is deprecated', 'APPPATH\\Helpers\\api_helper.php', 775)
+ 2 APPPATH\Helpers\api_helper.php(775): substr(null, 2, 3)
+ 3 APPPATH\Controllers\Admin.php(52): get_pass(null, '2229001')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->approve_action()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 00:22:48 --> substr(): Passing null to parameter #1 ($string) of type string is deprecated
+in APPPATH\Helpers\api_helper.php on line 775.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'substr(): Passing null to parameter #1 ($string) of type string is deprecated', 'APPPATH\\Helpers\\api_helper.php', 775)
+ 2 APPPATH\Helpers\api_helper.php(775): substr(null, 2, 3)
+ 3 APPPATH\Controllers\Admin.php(52): get_pass(null, '2229001')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->approve_action()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
