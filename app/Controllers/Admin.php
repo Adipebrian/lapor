@@ -28,7 +28,7 @@ class Admin extends BaseController
         $this->builder->orderBy('date', 'DESC');
         $result = $this->builder->get()->getResult();
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Dashboard Admin ',
+            'title' => 'SIPPOLSUB | Data Dashboard Admin ',
             'uri' => $this->uri,
             'result' => $result
         ];
@@ -56,7 +56,7 @@ class Admin extends BaseController
         $group_all = $this->builder->get()->getResult();
 
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data User ',
+            'title' => 'SIPPOLSUB | Data User ',
             'uri' => $this->uri,
             'result' => $result,
             'group_all' => $group_all,
@@ -211,7 +211,7 @@ class Admin extends BaseController
         $perm_all = $this->builder->get()->getResult();
 
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Role ',
+            'title' => 'SIPPOLSUB | Data Role ',
             'uri' => $this->uri,
             'group_all' => $group_all,
             'perm_all' => $perm_all,
@@ -357,7 +357,7 @@ class Admin extends BaseController
         $perm_all = $this->builder->get()->getResult();
 
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Role and Permission ',
+            'title' => 'SIPPOLSUB | Data Role and Permission ',
             'uri' => $this->uri,
             'group' => $group,
             'group_all' => $group_all,
@@ -427,7 +427,7 @@ class Admin extends BaseController
     {
         $result = $this->db->table('tblock')->where(['sts' => 3])->get()->getResult();
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Approval',
+            'title' => 'SIPPOLSUB | Data Approval',
             'uri' => $this->uri,
             'result' => $result,
         ];
@@ -457,7 +457,7 @@ class Admin extends BaseController
     public function log()
     {
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Log',
+            'title' => 'SIPPOLSUB | Data Log',
             'uri' => $this->uri,
             'result' => null,
             'nomor' => null
@@ -468,7 +468,7 @@ class Admin extends BaseController
     {
         $result = $this->db->table('tblog')->where('nomor', $this->request->getVar('nomor'))->get()->getResult();
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Log',
+            'title' => 'SIPPOLSUB | Data Log',
             'uri' => $this->uri,
             'result' => $result,
             'old' => null,
@@ -499,7 +499,7 @@ class Admin extends BaseController
         $new = explode(',', $new);
 
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data Log',
+            'title' => 'SIPPOLSUB | Data Log',
             'uri' => $this->uri,
             'result' => $result,
             'old' => $old,
