@@ -134,9 +134,9 @@
 
 		<section class="container d-flex flex-column justify-content-center align-items-center" style="padding-top: 7%; padding-bottom: 7%;" id="about">
 			<h3><b>Tentang Kami</b></h3>
-			<p class="text-center">SIPPOLSUB adalah Sistem Informasi Pelanggaran Mahasiswa Politeknik Negeri Subang. Sistem pelanggaran berbasis website ini memiliki user atau pengguna yang terlibat yaitu mahasiswa, wali kelas, akademik, ketua jurusan. Pada sistem ini tidak hanya dosen saja yang dapat menginputkan pelanggaran mahasiswa, tetapi mahasiswa juga dapat melaporkan jika melihat mahasiswa mahasiswa polsub melanggar peraturan akademik</p>
+			<p class="text-center">Sistem pengaduan Politeknik Negeri Subang adalah sebuah platform atau mekanisme yang digunakan untuk mengelola dan menangani pengaduan yang diajukan oleh mahasiswa, staf, atau pihak terkait terhadap masalah, masukan, atau permasalahan yang terkait dengan lingkungan kampus.</p>
 		</section>
-
+								
 		<section class="c-blue p-lg-5 text-white" style="padding: 10%;" id="report">
 			<div class="container">
 				<div class="row">
@@ -156,7 +156,7 @@
 							<a href="" style="text-decoration: none;color: #fff;"><b>
 									<h1>SIPPOLSUB</h1>
 								</b></a>
-							<p>SIPPOLSUB adalah Sistem Informasi Pelanggaran Mahasiswa Politeknik Negeri Subang. Sistem pelanggaran berbasis website ini memiliki user atau pengguna yang terlibat yaitu mahasiswa, wali kelas, akademik, ketua jurusan. Pada sistem ini tidak hanya dosen saja yang dapat menginputkan pelanggaran mahasiswa, tetapi mahasiswa juga dapat melaporkan jika melihat mahasiswa mahasiswa polsub melanggar peraturan akademik</p>
+							<p>Pada tanggal 2 April 2014 Politeknik Negeri Subang diresmikan oleh Presiden Republik Indonesia saat itu, Bapak Susilo Bambang Yudhoyono di Istana Negara. Setelah peresmian tersebut, diangkat Direktur pertama POLSUB melalui Surat Keputusan Menteri Pendidikan dan Kebudayaan no. 112/MPK.A4/KP/2014, tertanggal 24 April 2014.</p>
 							<div class="hr"></div>
 							<h6>Alamat</h6>
 							<h6>089123456<span>|</span>02123456</h6>

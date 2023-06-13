@@ -56,13 +56,9 @@
 					<?= session('errors.password') ?>
 				</div>
 			</div>
-			<div class="gr-form">
-				<div class="g-recaptcha" data-sitekey="6LfYIq4iAAAAABnpcjN7PFoCwvYTB50MuFWS4QBv"></div>
-			</div>
 			<div class="btn">
 				<button type="submit" class="btn-primary">Login</button>
 			</div>
-			<!-- <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p> -->
 			<p>Belum Punya Akun? <a href="<?= url_to('register') ?>">Daftar</a></p>
 		</form>
 	</div>

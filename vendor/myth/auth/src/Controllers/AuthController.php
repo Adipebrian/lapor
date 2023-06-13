@@ -195,8 +195,15 @@ class AuthController extends Controller
         if (!$this->config->allowRegistration) {
             return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
         }
+        $db      = \Config\Database::connect();
+    $builder = $db->table('tbjurusan');
+    $jurusan = $builder->get()->getResult();
+        $data = [
+            'config' => $this->config,
+            'jurusan' => $jurusan,
+        ];
 
-        return $this->_render($this->config->views['register'], ['config' => $this->config]);
+        return $this->_render($this->config->views['register'], $data);
     }
 
     /**
@@ -257,10 +264,9 @@ class AuthController extends Controller
             // Success!
             return redirect()->route('login')->with('message', lang('Auth.activationSuccess'));
         }
-
+        
         // Success!
-        session()->setFlashdata('pesan', 'Add user success!');
-        return redirect()->back();
+        return redirect()->route('login')->with('message', lang('Auth.registerSuccess'));
     }
 
     //--------------------------------------------------------------------
