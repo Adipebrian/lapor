@@ -11,7 +11,7 @@
  Target Server Version : 100424
  File Encoding         : 65001
 
- Date: 07/06/2023 17:46:23
+ Date: 13/06/2023 21:01:32
 */
 
 SET NAMES utf8mb4;
@@ -43,13 +43,18 @@ CREATE TABLE `auth_groups`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 62 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_groups
 -- ----------------------------
 INSERT INTO `auth_groups` VALUES (1, 'admin', 'role-admin');
 INSERT INTO `auth_groups` VALUES (2, 'user', 'role-user');
+INSERT INTO `auth_groups` VALUES (63, 'agroindustri', 'Agroindustri');
+INSERT INTO `auth_groups` VALUES (64, 'manajemen-informatika', 'Manajemen Informatika');
+INSERT INTO `auth_groups` VALUES (65, 'keperawatan', 'Keperawatan');
+INSERT INTO `auth_groups` VALUES (66, 'pemeliharaan-mesin', 'Pemeliharaan Mesin');
+INSERT INTO `auth_groups` VALUES (67, 'admin-agroindustri', 'admin-agroindustri');
 
 -- ----------------------------
 -- Table structure for auth_groups_permissions
@@ -87,7 +92,9 @@ CREATE TABLE `auth_groups_users`  (
 -- Records of auth_groups_users
 -- ----------------------------
 INSERT INTO `auth_groups_users` VALUES (1, 1);
-INSERT INTO `auth_groups_users` VALUES (2, 76);
+INSERT INTO `auth_groups_users` VALUES (1, 76);
+INSERT INTO `auth_groups_users` VALUES (2, 77);
+INSERT INTO `auth_groups_users` VALUES (2, 86);
 
 -- ----------------------------
 -- Table structure for auth_logins
@@ -103,7 +110,7 @@ CREATE TABLE `auth_logins`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `email`(`email`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_logins
@@ -117,6 +124,21 @@ INSERT INTO `auth_logins` VALUES (6, '::1; Chrome', 'admin@admin.com', 1, '2023-
 INSERT INTO `auth_logins` VALUES (7, '::1; Chrome', 'admin@admin.com', 1, '2023-06-05 20:17:43', 1);
 INSERT INTO `auth_logins` VALUES (8, '::1; Chrome', 'admin@admin.com', 1, '2023-06-05 20:29:18', 1);
 INSERT INTO `auth_logins` VALUES (9, '::1; Chrome', 'admin@admin.com', 1, '2023-06-06 23:36:10', 1);
+INSERT INTO `auth_logins` VALUES (10, '::1; Chrome', 'admin@admin.com', 1, '2023-06-07 20:03:25', 1);
+INSERT INTO `auth_logins` VALUES (11, '::1; Chrome', 'admin@admin.com', 1, '2023-06-07 20:10:25', 1);
+INSERT INTO `auth_logins` VALUES (12, '::1; Chrome', 'user@user.com', NULL, '2023-06-07 20:12:40', 0);
+INSERT INTO `auth_logins` VALUES (13, '::1; Chrome', 'admin@admin.com', 1, '2023-06-07 20:12:43', 1);
+INSERT INTO `auth_logins` VALUES (14, '::1; Chrome', 'admin@admin.com', 1, '2023-06-07 21:52:07', 1);
+INSERT INTO `auth_logins` VALUES (15, '::1; Chrome', 'admin@admin.com', 1, '2023-06-08 21:17:31', 1);
+INSERT INTO `auth_logins` VALUES (16, '::1; Chrome', 'admin@admin.com', 1, '2023-06-12 23:24:48', 1);
+INSERT INTO `auth_logins` VALUES (17, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 20:27:06', 1);
+INSERT INTO `auth_logins` VALUES (18, '::1; Chrome', 'user@user.com1', NULL, '2023-06-13 20:33:32', 0);
+INSERT INTO `auth_logins` VALUES (19, '::1; Chrome', 'user@user.com1', NULL, '2023-06-13 20:33:41', 0);
+INSERT INTO `auth_logins` VALUES (20, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 20:33:46', 1);
+INSERT INTO `auth_logins` VALUES (21, '::1; Chrome', 'user@tes.com1', 86, '2023-06-13 20:34:09', 0);
+INSERT INTO `auth_logins` VALUES (22, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 20:34:19', 1);
+INSERT INTO `auth_logins` VALUES (23, '::1; Chrome', 'user@tes.com1', 86, '2023-06-13 20:34:51', 1);
+INSERT INTO `auth_logins` VALUES (24, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 20:35:06', 1);
 
 -- ----------------------------
 -- Table structure for auth_permissions
@@ -127,13 +149,14 @@ CREATE TABLE `auth_permissions`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_permissions
 -- ----------------------------
 INSERT INTO `auth_permissions` VALUES (1, 'manage-all', 'role-admin');
 INSERT INTO `auth_permissions` VALUES (2, 'manage-user', 'role-user');
+INSERT INTO `auth_permissions` VALUES (18, 'mahasiswa', 'mahasiswa');
 
 -- ----------------------------
 -- Table structure for auth_reset_attempts
@@ -209,6 +232,24 @@ CREATE TABLE `tbfeedback`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for tbjurusan
+-- ----------------------------
+DROP TABLE IF EXISTS `tbjurusan`;
+CREATE TABLE `tbjurusan`  (
+  `kode` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `jurusan` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`kode`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tbjurusan
+-- ----------------------------
+INSERT INTO `tbjurusan` VALUES ('J1', 'Agroindustri\n');
+INSERT INTO `tbjurusan` VALUES ('J2', 'Manajemen Informatika');
+INSERT INTO `tbjurusan` VALUES ('J4', 'Keperawatan');
+INSERT INTO `tbjurusan` VALUES ('J5', 'Pemeliharaan Mesin');
+
+-- ----------------------------
 -- Table structure for tbreport
 -- ----------------------------
 DROP TABLE IF EXISTS `tbreport`;
@@ -234,6 +275,8 @@ INSERT INTO `tbreport` VALUES ('2023060001', 1, 'Matematika', 'tes', '0000-00-00
 INSERT INTO `tbreport` VALUES ('2023060002', 1, 'Matematika', 'tes', '0000-00-00', 'tes', '2023060002.png', NULL, '2023-06-05 22:07:44;administrator', NULL, NULL);
 INSERT INTO `tbreport` VALUES ('2023060003', 1, 'Matematika', 'tes', '2023-06-28', 'tes', '2023060003.png', NULL, '2023-06-05 22:08:35;administrator', NULL, NULL);
 INSERT INTO `tbreport` VALUES ('2023060004', 1, 'Matematika', 'tes', '2023-06-28', 'tes', '2023060004.png', NULL, '2023-06-05 22:09:09;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060005', 1, 'Sampa berserakan', 'testin', '2023-06-11', 'Halaman Kampus', '2023060005.png', NULL, '2023-06-07 20:04:01;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060006', 1, 'Kebersihan Ruangan', 'Testing', '2023-06-04', 'Ruangan', '2023060006.png', NULL, '2023-06-07 20:08:50;administrator', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for users
@@ -243,6 +286,7 @@ CREATE TABLE `users`  (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `jurusan` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `reset_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -259,12 +303,14 @@ CREATE TABLE `users`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `email`(`email`) USING BTREE,
   UNIQUE INDEX `username`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 77 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'admin@admin.com', 'administrator', '1662023046_9015dc727a4e62cf0013.png', '$2y$10$ixsPGTyTO7K4.e64/IVRs.anE2sVvzoMWFZvd47iDZZyvkYhUJ0xa', NULL, NULL, NULL, 'b1ccea41f785adb7d8aa788e138989cf', NULL, NULL, 1, 0, '2022-08-11 01:08:52', '2022-08-29 14:43:47', NULL);
-INSERT INTO `users` VALUES (76, 'user@user.com', 'user', 'default.png', '$2y$10$jAvk0RkmKq2pW8qa5NMcduxaxsH28wUCQIlFZtHA38Vqt45J9RbCy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-04 15:09:30', '2023-06-04 15:09:30', NULL);
+INSERT INTO `users` VALUES (1, 'admin@admin.com', 'administrator', '', '1662023046_9015dc727a4e62cf0013.png', '$2y$10$ixsPGTyTO7K4.e64/IVRs.anE2sVvzoMWFZvd47iDZZyvkYhUJ0xa', NULL, NULL, NULL, 'b1ccea41f785adb7d8aa788e138989cf', NULL, NULL, 1, 0, '2022-08-11 01:08:52', '2022-08-29 14:43:47', NULL);
+INSERT INTO `users` VALUES (76, 'user@user.com', 'user', '', 'default.png', '$2y$10$jAvk0RkmKq2pW8qa5NMcduxaxsH28wUCQIlFZtHA38Vqt45J9RbCy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-04 15:09:30', '2023-06-04 15:09:30', NULL);
+INSERT INTO `users` VALUES (77, 'testinguser@lapor.com', 'usertes', '', 'default.png', '$2y$10$gEKgFfLj.1PUBwem6oOs5eLFx7ljONr8aCmO/rajgFhiTtJ3B9LGy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-07 20:14:16', '2023-06-07 20:14:16', NULL);
+INSERT INTO `users` VALUES (86, 'user@tes.com1', 'user1123', 'J2', 'default.png', '$2y$10$c0RREnT2ldRibmur2eTv9ul6bSvHwPAoABgNgeiDV6wJSqa0DVWsG', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 20:33:06', '2023-06-13 20:34:38', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;
