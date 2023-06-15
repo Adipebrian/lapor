@@ -1,0 +1,361 @@
+CRITICAL - 2023-06-15 21:49:52 --> Undefined variable $admin
+in APPPATH\Helpers\lapor_helper.php on line 50.
+ 1 APPPATH\Helpers\lapor_helper.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Helpers\\lapor_helper.php', 50)
+ 2 APPPATH\Controllers\Lapor.php(18): jurusan()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 21:50:13 --> Undefined variable $admin
+in APPPATH\Helpers\lapor_helper.php on line 50.
+ 1 APPPATH\Helpers\lapor_helper.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Helpers\\lapor_helper.php', 50)
+ 2 APPPATH\Controllers\Lapor.php(18): jurusan()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 21:54:04 --> permissions filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('permissions')
+ 2 SYSTEMPATH\CodeIgniter.php(422): CodeIgniter\Filters\Filters->enableFilter('permissions', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 21:54:15 --> permissions filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('permissions')
+ 2 SYSTEMPATH\CodeIgniter.php(422): CodeIgniter\Filters\Filters->enableFilter('permissions', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 21:54:16 --> permissions filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('permissions')
+ 2 SYSTEMPATH\CodeIgniter.php(422): CodeIgniter\Filters\Filters->enableFilter('permissions', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 21:54:17 --> permissions filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('permissions')
+ 2 SYSTEMPATH\CodeIgniter.php(422): CodeIgniter\Filters\Filters->enableFilter('permissions', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:03:42 --> mysqli_sql_exception: Column 'user_id' in where clause is ambiguous in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show('2023060001')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-15 22:03:42 --> Column 'user_id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `tbreport`
+JOIN `tbfeedback` ON `tbfeedback`.`noref`=`tbreport`.`noref`
+WHERE `user_id` = \'87\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbreport`
+JOIN `tbfeedback` ON `tbfeedback`.`noref`=`tbreport`.`noref`
+WHERE `user_id` = \'87\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbreport`
+JOIN `tbfeedback` ON `tbfeedback`.`noref`=`tbreport`.`noref`
+WHERE `user_id` = \'87\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbreport`
+JOIN `tbfeedback` ON `tbfeedback`.`noref`=`tbreport`.`noref`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Controllers\Lapor.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show('2023060001')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:05:25 --> mysqli_sql_exception: Unknown column 'r.tuujuan' in 'where clause' in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-15 22:05:25 --> Unknown column 'r.tuujuan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `tbreport` `r`
+JOIN `tbfeedback` `f` ON `f`.`noref`=`r`.`noref`
+WHERE `r`.`tuujuan` = \'J1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbreport` `r`
+JOIN `tbfeedback` `f` ON `f`.`noref`=`r`.`noref`
+WHERE `r`.`tuujuan` = \'J1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbreport` `r`
+JOIN `tbfeedback` `f` ON `f`.`noref`=`r`.`noref`
+WHERE `r`.`tuujuan` = \'J1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbreport` `r`
+JOIN `tbfeedback` `f` ON `f`.`noref`=`r`.`noref`
+WHERE `r`.`tuujuan` = :r.tuujuan:', [...], false)
+ 5 APPPATH\Controllers\Lapor.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 22:21:28 --> Undefined array key 0
+in APPPATH\Helpers\lapor_helper.php on line 86.
+ 1 APPPATH\Helpers\lapor_helper.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Helpers\\lapor_helper.php', 86)
+ 2 APPPATH\Views\lapor\show.php(35): tgl_indo('0000-00-00')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 6 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:27:43 --> mysqli_sql_exception: Table 'lapor.auth_users' doesn't exist in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\app\Views\lapor\show.php(36): get_info('1')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Common.php(1137): CodeIgniter\View\View->render('lapor/show', Array, true)
+#9 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(56): view('lapor/show', Array)
+#10 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+#11 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#12 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-06-15 22:27:43 --> Table 'lapor.auth_users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `auth_users`
+WHERE `user_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `auth_users`
+WHERE `user_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `auth_users`
+WHERE `user_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_users`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Views\lapor\show.php(36): get_info('1')
+ 7 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 8 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+10 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:27:44 --> mysqli_sql_exception: Table 'lapor.auth_users' doesn't exist in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\app\Views\lapor\show.php(36): get_info('1')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Common.php(1137): CodeIgniter\View\View->render('lapor/show', Array, true)
+#9 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(56): view('lapor/show', Array)
+#10 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+#11 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#12 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-06-15 22:27:44 --> Table 'lapor.auth_users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `auth_users`
+WHERE `user_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `auth_users`
+WHERE `user_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `auth_users`
+WHERE `user_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_users`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Views\lapor\show.php(36): get_info('1')
+ 7 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 8 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+10 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:27:56 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\app\Views\lapor\show.php(36): get_info('1')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Common.php(1137): CodeIgniter\View\View->render('lapor/show', Array, true)
+#9 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(56): view('lapor/show', Array)
+#10 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+#11 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#12 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-06-15 22:27:56 --> Unknown column 'user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Views\lapor\show.php(36): get_info('1')
+ 7 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 8 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+10 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:27:57 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\app\Views\lapor\show.php(36): get_info('1')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Common.php(1137): CodeIgniter\View\View->render('lapor/show', Array, true)
+#9 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(56): view('lapor/show', Array)
+#10 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+#11 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#12 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-06-15 22:27:57 --> Unknown column 'user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Views\lapor\show.php(36): get_info('1')
+ 7 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 8 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+10 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-15 22:27:57 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lapor\app\Views\lapor\show.php(36): get_info('1')
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Common.php(1137): CodeIgniter\View\View->render('lapor/show', Array, true)
+#9 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(56): view('lapor/show', Array)
+#10 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+#11 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#12 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-06-15 22:27:57 --> Unknown column 'user_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `user_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Helpers\lapor_helper.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Views\lapor\show.php(36): get_info('1')
+ 7 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 8 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+10 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 22:28:02 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\lapor\show.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 4 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 22:28:03 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\lapor\show.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 4 APPPATH\Controllers\Lapor.php(56): view('lapor/show', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060001')
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 22:47:10 --> syntax error, unexpected variable "$data"
+in APPPATH\Controllers\Lapor.php on line 52.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('lapor/show_admin/2023060005')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('lapor/show_admin/2023060005')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('lapor/show_admin/2023060005')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-15 23:04:56 --> Cannot redeclare App\Controllers\Lapor::data()
+in APPPATH\Controllers\Lapor.php on line 27.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-15 23:04:58 --> Cannot redeclare App\Controllers\Lapor::data()
+in APPPATH\Controllers\Lapor.php on line 27.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

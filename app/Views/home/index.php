@@ -111,6 +111,17 @@
 								<?= $validation->getError('lokasi') ?>
 							</div>
 						</div>
+						<div class="col-md-12 mb-3">
+							<select name="tujuan" id="tujuan" class="form-control" required>
+								<option value="" disabled selected>-- Pilih Tujuan --</option>
+								<?php foreach($tujuan as$t): ?>
+									<option value="<?=$t->kode ?>"> <?= $t->jurusan ?></option>
+									<?php endforeach; ?>
+							</select>
+							<div class="invalid-feedback">
+								<?= $validation->getError('lokasi') ?>
+							</div>
+						</div>
 						<div class="row mb-3 d-flex flex-column">
 							<label for="foto" class="col-md-2 col-form-label">Foto</label>
 							<div class="col-md-12">

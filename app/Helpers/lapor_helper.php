@@ -38,3 +38,88 @@ function role($id)
     $result = $builder->get()->getRow();
     return $result;
 }
+function get_info($id)
+{
+    $db      = \Config\Database::connect();
+    $result = $db->table('users')->where('id', $id)->get()->getRow();
+    return $result;
+}
+function get_jurusan($id)
+{
+    $db      = \Config\Database::connect();
+    $result = $db->table('tbjurusan')->where('kode', $id)->get()->getRow();
+    return $result;
+}
+function jurusan(){
+    $db      = \Config\Database::connect();
+    $id =  user_id();
+    $builder = $db->table('auth_groups_users');
+    $builder->select('*');
+    $builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+    $builder->where('user_id', $id);
+    $result = $builder->get()->getRow();
+    $name = $result->name;
+    switch ($name) {
+        case 'agroindustri':
+            return "J1";
+            break;
+        case 'manajemen-informatika':
+            return "J2";
+            break;
+        case 'keperawatan':
+            return "J3";
+            break;
+        case 'pemeliharaan-mesin':
+            return "J4";
+            break;
+        default:
+            return null;
+            break;
+    }
+}
+function tgl_indo($tanggal)
+{
+    $bulan = array(
+        1 =>   'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+    );
+    if ($tanggal) {
+        $pecahkan = explode('-', $tanggal);
+        return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+    } else {
+        return "no data";
+    }
+}
+function tgl_indo2($tanggal)
+{
+    $bulan = array(
+        1 =>   'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+    );
+    if ($tanggal) {
+        $pecahkan = explode('-', $tanggal);
+        return $pecahkan[2] . '-' . substr($bulan[(int)$pecahkan[1]], 0, 3) . '-' . $pecahkan[0];
+    } else {
+        return "no data";
+    }
+}

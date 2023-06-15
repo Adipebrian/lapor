@@ -91,7 +91,7 @@ $routes->group('user', ['filter' => 'role:user,admin'], static function ($routes
     $routes->post('update', 'User::update');
     $routes->post('update/(:any)', 'User::update');
 });
-$routes->group('lapor', ['filter' => 'role:user,admin'], static function ($routes) {
+$routes->group('lapor', ['filter' => 'role:user,admin,agroindustri,manajemen-informatika,keperawatan,pemeliharaan-mesin'], static function ($routes) {
     $routes->get('data', 'Lapor::data');
     $routes->post('store', 'Lapor::store');
 });

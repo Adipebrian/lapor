@@ -51,10 +51,19 @@
                                             <td><?= $r->judul ?></td>
                                             <td><?= $r->lokasi ?></td>
                                             <td><?= $r->tgl ?></td>
-                                            <td><?= $r->sts ?></td>
                                             <td>
-                                                <a href="#" class="badge badge-success">Lihat Pengaduan</a>
-                                                <a href="#" class="badge badge-success">Lihat Tanggapan</a>
+                                                <?php if ($r->sts == 0) : ?>
+                                                    <span class="badge bg-secondary">Belum Dilihat</span>
+                                                <?php elseif ($r->sts == 1) : ?>
+                                                    <span class="badge bg-success">Dilihat</span>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td>
+                                                <?php if(has_permission('admin-jurusan')): ?>
+                                                <a href="<?= base_url() ?>/lapor/show_admin/<?= $r->noref ?>" target="_blank" class="badge badge-success">Lihat Pengaduan</a>
+                                                <?php else: ?>
+                                                    <a href="<?= base_url() ?>/lapor/show/<?= $r->noref ?>" target="_blank" class="badge badge-success">Lihat Pengaduan</a>
+                                                    <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

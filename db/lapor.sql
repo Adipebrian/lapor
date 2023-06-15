@@ -11,7 +11,7 @@
  Target Server Version : 100424
  File Encoding         : 65001
 
- Date: 13/06/2023 21:01:32
+ Date: 15/06/2023 23:16:50
 */
 
 SET NAMES utf8mb4;
@@ -54,7 +54,6 @@ INSERT INTO `auth_groups` VALUES (63, 'agroindustri', 'Agroindustri');
 INSERT INTO `auth_groups` VALUES (64, 'manajemen-informatika', 'Manajemen Informatika');
 INSERT INTO `auth_groups` VALUES (65, 'keperawatan', 'Keperawatan');
 INSERT INTO `auth_groups` VALUES (66, 'pemeliharaan-mesin', 'Pemeliharaan Mesin');
-INSERT INTO `auth_groups` VALUES (67, 'admin-agroindustri', 'admin-agroindustri');
 
 -- ----------------------------
 -- Table structure for auth_groups_permissions
@@ -74,6 +73,10 @@ CREATE TABLE `auth_groups_permissions`  (
 -- ----------------------------
 INSERT INTO `auth_groups_permissions` VALUES (1, 1);
 INSERT INTO `auth_groups_permissions` VALUES (2, 2);
+INSERT INTO `auth_groups_permissions` VALUES (63, 18);
+INSERT INTO `auth_groups_permissions` VALUES (64, 18);
+INSERT INTO `auth_groups_permissions` VALUES (65, 18);
+INSERT INTO `auth_groups_permissions` VALUES (66, 18);
 
 -- ----------------------------
 -- Table structure for auth_groups_users
@@ -92,9 +95,15 @@ CREATE TABLE `auth_groups_users`  (
 -- Records of auth_groups_users
 -- ----------------------------
 INSERT INTO `auth_groups_users` VALUES (1, 1);
-INSERT INTO `auth_groups_users` VALUES (1, 76);
-INSERT INTO `auth_groups_users` VALUES (2, 77);
-INSERT INTO `auth_groups_users` VALUES (2, 86);
+INSERT INTO `auth_groups_users` VALUES (2, 76);
+INSERT INTO `auth_groups_users` VALUES (2, 91);
+INSERT INTO `auth_groups_users` VALUES (2, 92);
+INSERT INTO `auth_groups_users` VALUES (2, 93);
+INSERT INTO `auth_groups_users` VALUES (2, 94);
+INSERT INTO `auth_groups_users` VALUES (63, 87);
+INSERT INTO `auth_groups_users` VALUES (64, 88);
+INSERT INTO `auth_groups_users` VALUES (65, 89);
+INSERT INTO `auth_groups_users` VALUES (66, 90);
 
 -- ----------------------------
 -- Table structure for auth_logins
@@ -110,7 +119,7 @@ CREATE TABLE `auth_logins`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `email`(`email`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_logins
@@ -139,6 +148,19 @@ INSERT INTO `auth_logins` VALUES (21, '::1; Chrome', 'user@tes.com1', 86, '2023-
 INSERT INTO `auth_logins` VALUES (22, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 20:34:19', 1);
 INSERT INTO `auth_logins` VALUES (23, '::1; Chrome', 'user@tes.com1', 86, '2023-06-13 20:34:51', 1);
 INSERT INTO `auth_logins` VALUES (24, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 20:35:06', 1);
+INSERT INTO `auth_logins` VALUES (25, '::1; Chrome', 'admin@admin.com', 1, '2023-06-13 21:24:57', 1);
+INSERT INTO `auth_logins` VALUES (26, '::1; Chrome', 'admin@admin.com', NULL, '2023-06-13 22:32:47', 0);
+INSERT INTO `auth_logins` VALUES (27, '::1; Chrome', 'admin@admin.com', NULL, '2023-06-13 22:33:31', 0);
+INSERT INTO `auth_logins` VALUES (28, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-13 22:33:35', 1);
+INSERT INTO `auth_logins` VALUES (29, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-13 22:33:35', 1);
+INSERT INTO `auth_logins` VALUES (30, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-14 23:25:34', 1);
+INSERT INTO `auth_logins` VALUES (31, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-15 21:23:35', 1);
+INSERT INTO `auth_logins` VALUES (32, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-15 21:52:18', 1);
+INSERT INTO `auth_logins` VALUES (33, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-15 23:00:34', 1);
+INSERT INTO `auth_logins` VALUES (34, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-15 23:07:50', 1);
+INSERT INTO `auth_logins` VALUES (35, '::1; Chrome', 'user1@user.com', 91, '2023-06-15 23:08:11', 1);
+INSERT INTO `auth_logins` VALUES (36, '::1; Chrome', 'admin@admin.com', NULL, '2023-06-15 23:08:36', 0);
+INSERT INTO `auth_logins` VALUES (37, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-15 23:08:45', 1);
 
 -- ----------------------------
 -- Table structure for auth_permissions
@@ -156,7 +178,7 @@ CREATE TABLE `auth_permissions`  (
 -- ----------------------------
 INSERT INTO `auth_permissions` VALUES (1, 'manage-all', 'role-admin');
 INSERT INTO `auth_permissions` VALUES (2, 'manage-user', 'role-user');
-INSERT INTO `auth_permissions` VALUES (18, 'mahasiswa', 'mahasiswa');
+INSERT INTO `auth_permissions` VALUES (18, 'admin-jurusan', 'Admin Jurusan');
 
 -- ----------------------------
 -- Table structure for auth_reset_attempts
@@ -214,24 +236,6 @@ CREATE TABLE `auth_users_permissions`  (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for tbfeedback
--- ----------------------------
-DROP TABLE IF EXISTS `tbfeedback`;
-CREATE TABLE `tbfeedback`  (
-  `noref` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `user_id` int(100) NULL DEFAULT NULL,
-  `isi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `inputby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `editby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `deleteby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`noref`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of tbfeedback
--- ----------------------------
-
--- ----------------------------
 -- Table structure for tbjurusan
 -- ----------------------------
 DROP TABLE IF EXISTS `tbjurusan`;
@@ -255,9 +259,10 @@ INSERT INTO `tbjurusan` VALUES ('J5', 'Pemeliharaan Mesin');
 DROP TABLE IF EXISTS `tbreport`;
 CREATE TABLE `tbreport`  (
   `noref` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `user_id` int(100) NOT NULL,
+  `user_id` int(100) NOT NULL COMMENT 'pengirim\r\n',
   `judul` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `isi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `tujuan` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'kode jurusan',
   `tgl` date NULL DEFAULT NULL,
   `lokasi` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `foto` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -271,12 +276,40 @@ CREATE TABLE `tbreport`  (
 -- ----------------------------
 -- Records of tbreport
 -- ----------------------------
-INSERT INTO `tbreport` VALUES ('2023060001', 1, 'Matematika', 'tes', '0000-00-00', 'tes', '2023060001.png', NULL, '2023-06-05 22:04:23;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060002', 1, 'Matematika', 'tes', '0000-00-00', 'tes', '2023060002.png', NULL, '2023-06-05 22:07:44;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060003', 1, 'Matematika', 'tes', '2023-06-28', 'tes', '2023060003.png', NULL, '2023-06-05 22:08:35;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060004', 1, 'Matematika', 'tes', '2023-06-28', 'tes', '2023060004.png', NULL, '2023-06-05 22:09:09;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060005', 1, 'Sampa berserakan', 'testin', '2023-06-11', 'Halaman Kampus', '2023060005.png', NULL, '2023-06-07 20:04:01;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060006', 1, 'Kebersihan Ruangan', 'Testing', '2023-06-04', 'Ruangan', '2023060006.png', NULL, '2023-06-07 20:08:50;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060001', 1, 'Matematika', 'tes', 'J1', '2023-06-15', 'tes', '2023060001.png', 1, '2023-06-05 22:04:23;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060002', 1, 'Matematika', 'tes', 'J2', '2023-06-15', 'tes', '2023060002.png', NULL, '2023-06-05 22:07:44;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060003', 1, 'Matematika', 'tes', 'J3', '2023-06-28', 'tes', '2023060003.png', NULL, '2023-06-05 22:08:35;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060004', 1, 'Matematika', 'tes', 'J4', '2023-06-28', 'tes', '2023060004.png', NULL, '2023-06-05 22:09:09;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060005', 1, 'Sampa berserakan', 'testin', 'J1', '2023-06-11', 'Halaman Kampus', '2023060005.png', 1, '2023-06-07 20:04:01;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060006', 1, 'Kebersihan Ruangan', 'Testing', 'J3', '2023-06-04', 'Ruangan', '2023060006.png', NULL, '2023-06-07 20:08:50;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060007', 1, 'tes', 'tes', 'J1', '2023-06-20', 'tes', '2023060007.png', 1, '2023-06-14 23:25:53;administrator', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060008', 91, 'Temuan Sampah', 'Sampah Berserakan', 'J1', '2023-06-15', 'Halaman Kampus', '2023060008.png', 1, '2023-06-15 23:12:42;User Agroindustri', NULL, NULL);
+
+-- ----------------------------
+-- Table structure for tbreport_d
+-- ----------------------------
+DROP TABLE IF EXISTS `tbreport_d`;
+CREATE TABLE `tbreport_d`  (
+  `noref` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `urut` int(2) NOT NULL,
+  `tgl` datetime(0) NOT NULL,
+  `user_id` int(255) NULL DEFAULT NULL COMMENT 'pengirim',
+  `isi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `inputby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`noref`, `urut`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tbreport_d
+-- ----------------------------
+INSERT INTO `tbreport_d` VALUES ('2023060005', 1, '2023-06-15 00:00:00', 87, 'tes', '2023-06-15 22:46:02;87');
+INSERT INTO `tbreport_d` VALUES ('2023060005', 2, '2023-06-15 22:56:14', 87, 'tes2', '2023-06-15 22:52:28;87');
+INSERT INTO `tbreport_d` VALUES ('2023060005', 3, '2023-06-15 22:56:18', 87, 'tes\r\n3\r\n', '2023-06-15 22:54:12;87');
+INSERT INTO `tbreport_d` VALUES ('2023060005', 4, '2023-06-15 22:58:17', 87, 'tes4', '2023-06-15 22:58:17;87');
+INSERT INTO `tbreport_d` VALUES ('2023060005', 5, '2023-06-15 23:06:40', 1, 'tes2', '2023-06-15 23:06:40;1');
+INSERT INTO `tbreport_d` VALUES ('2023060007', 1, '2023-06-15 22:58:45', 87, 'tes1', '2023-06-15 22:58:45;87');
+INSERT INTO `tbreport_d` VALUES ('2023060008', 1, '2023-06-15 23:14:32', 87, 'Oke noted\r\n', '2023-06-15 23:14:32;87');
+INSERT INTO `tbreport_d` VALUES ('2023060008', 2, '2023-06-15 23:15:03', 91, 'Baik Terimakasih', '2023-06-15 23:15:03;91');
 
 -- ----------------------------
 -- Table structure for users
@@ -286,7 +319,6 @@ CREATE TABLE `users`  (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `jurusan` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `reset_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -303,14 +335,20 @@ CREATE TABLE `users`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `email`(`email`) USING BTREE,
   UNIQUE INDEX `username`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 95 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'admin@admin.com', 'administrator', '', '1662023046_9015dc727a4e62cf0013.png', '$2y$10$ixsPGTyTO7K4.e64/IVRs.anE2sVvzoMWFZvd47iDZZyvkYhUJ0xa', NULL, NULL, NULL, 'b1ccea41f785adb7d8aa788e138989cf', NULL, NULL, 1, 0, '2022-08-11 01:08:52', '2022-08-29 14:43:47', NULL);
-INSERT INTO `users` VALUES (76, 'user@user.com', 'user', '', 'default.png', '$2y$10$jAvk0RkmKq2pW8qa5NMcduxaxsH28wUCQIlFZtHA38Vqt45J9RbCy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-04 15:09:30', '2023-06-04 15:09:30', NULL);
-INSERT INTO `users` VALUES (77, 'testinguser@lapor.com', 'usertes', '', 'default.png', '$2y$10$gEKgFfLj.1PUBwem6oOs5eLFx7ljONr8aCmO/rajgFhiTtJ3B9LGy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-07 20:14:16', '2023-06-07 20:14:16', NULL);
-INSERT INTO `users` VALUES (86, 'user@tes.com1', 'user1123', 'J2', 'default.png', '$2y$10$c0RREnT2ldRibmur2eTv9ul6bSvHwPAoABgNgeiDV6wJSqa0DVWsG', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 20:33:06', '2023-06-13 20:34:38', NULL);
+INSERT INTO `users` VALUES (1, 'superadmin@admin.com', 'administrator', '1662023046_9015dc727a4e62cf0013.png', '$2y$10$ixsPGTyTO7K4.e64/IVRs.anE2sVvzoMWFZvd47iDZZyvkYhUJ0xa', NULL, NULL, NULL, 'b1ccea41f785adb7d8aa788e138989cf', NULL, NULL, 1, 0, '2022-08-11 01:08:52', '2023-06-13 22:31:27', NULL);
+INSERT INTO `users` VALUES (76, 'user@user.com', 'user', 'default.png', '$2y$10$jAvk0RkmKq2pW8qa5NMcduxaxsH28wUCQIlFZtHA38Vqt45J9RbCy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-04 15:09:30', '2023-06-04 15:09:30', NULL);
+INSERT INTO `users` VALUES (87, 'admin1@admin.com', 'Admin Agroindustri', 'default.png', '$2y$10$qA5lsMrxu/j6hV/.I98HeOwkcYd2BBuvq3yvbOyp4FlZ5DodnSymK', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:29:01', '2023-06-13 22:29:01', NULL);
+INSERT INTO `users` VALUES (88, 'admin2@admin.com', 'Admin Manajemen Informatika', 'default.png', '$2y$10$3gibLVAoXVqNRDr/71HCtecRbmBHxEH6IoAcY4DiQw4IQi/NjXrYq', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:29:37', '2023-06-13 22:29:37', NULL);
+INSERT INTO `users` VALUES (89, 'admin3@admin.com', 'Admin Keperawatan', 'default.png', '$2y$10$ywVjpe6Q23445b/QHheFteZYtld2oBMjiToIHYbiJ9bX19cd7a7lu', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:30:19', '2023-06-13 22:30:19', NULL);
+INSERT INTO `users` VALUES (90, 'admin4@admin.com', 'Admin PemeliharaanMesin', 'default.png', '$2y$10$Jpva97zSr7HAGqYusXOubuPyhXCsvpB1gtZeWRs1ANUzJxZCGTOlO', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:31:11', '2023-06-13 22:31:11', NULL);
+INSERT INTO `users` VALUES (91, 'user1@user.com', 'User Agroindustri', 'default.png', '$2y$10$Bm7XF3y1EbmMx3iV3lVvYeqXfEJn/hdz1F/Gg7V/hWUmyrB.PlIge', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:35:14', '2023-06-13 22:35:14', NULL);
+INSERT INTO `users` VALUES (92, 'user2@user.com', 'User Manajemen Informatika', 'default.png', '$2y$10$JoxY1ooki/kSp2HCEZ/fd.I7XVpmNvKX6L3UVCY6nGG6r5qg.KSIa', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:35:42', '2023-06-13 22:35:42', NULL);
+INSERT INTO `users` VALUES (93, 'user3@user.com', 'User Keperawatan', 'default.png', '$2y$10$IFVfBzUuEmmii52AuG9PFuH.84rn3/fmMi2S.mEu4QGJHDwA6YsOy', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:36:05', '2023-06-13 22:36:05', NULL);
+INSERT INTO `users` VALUES (94, 'user4@user.com', 'User PemeliharaanMesin', 'default.png', '$2y$10$d.VPmrzN1cEiGuTjKiseUeuh7iuMYMVxOCwQmtLtL.JkrYmoBLjyG', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-06-13 22:36:33', '2023-06-13 22:36:33', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

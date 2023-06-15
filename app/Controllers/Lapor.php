@@ -14,13 +14,88 @@ class Lapor extends BaseController
     }
     public function data()
     {
-        $result = $this->db->table('tbreport')->where('user_id',user_id())->get()->getResult();
+        $result = $this->db->table('tbreport')
+        ->where('user_id',user_id())
+        ->get()->getResult();
         $data = [
             'title' => 'Data Laporan',
             'uri' => $this->uri,
             'result' => $result,
         ];
         return view('lapor/data',$data);
+    }
+    public function data_admin()
+    {
+        $result = $this->db->table('tbreport')
+        ->where('tujuan',jurusan())
+        ->get()->getResult();
+        $data = [
+            'title' => 'Data Laporan',
+            'uri' => $this->uri,
+            'result' => $result,
+        ];
+        return view('lapor/data',$data);
+    }
+    public function show($noref)
+    {
+        $result = $this->db->table('tbreport r')
+        ->where('r.noref',$noref)
+        ->get()->getRow();
+        if($result->user_id == user_id()){
+            $result2 = $this->db->table('tbreport_d r')
+            ->where('r.noref',$noref)
+            ->orderBy('urut','ASC')
+            ->get()->getResult();
+            $data = [
+                'title' => 'Data Laporan',
+                'uri' => $this->uri,
+                'result' => $result,
+                'result2' => $result2,
+            ];
+            return view('lapor/show',$data);
+        }else{
+            session()->setFlashdata('failed','Access Denied');
+            return redirect()->to('lapor/data');
+        }
+    }
+    public function show_admin($noref)
+    {
+        $result = $this->db->table('tbreport r')
+        ->where('r.noref',$noref)
+        ->get()->getRow();
+        $this->db->table('tbreport')->where('noref',$noref)->update(['sts' => 1]);
+        $result2 = $this->db->table('tbreport_d r')
+        ->where('r.noref',$noref)
+        ->orderBy('urut','ASC')
+        ->get()->getResult();
+        $data = [
+            'title' => 'Data Laporan',
+            'uri' => $this->uri,
+            'result' => $result,
+            'result2' => $result2,
+        ];
+        return view('lapor/show',$data);
+    }
+    public function feedback()
+    {
+        $noref = $this->request->getVar('noref');
+        $urut = $this->db->table('tbreport_d')->where('noref',$noref)->orderBy('urut','DESC')->get()->getRow();
+        if($urut){
+            $urut = $urut->urut + 1;
+        }else{
+            $urut = 1;
+        }
+        $data = [
+            'noref' => $noref,
+            'urut' => $urut,
+            'isi' => $this->request->getVar('isi'),
+            'user_id' => user_id(),
+            'tgl' => $this->time,
+            'inputby' => $this->time .';'.user_id()
+        ];
+        $this->db->table('tbreport_d')->where('noref',$noref)->insert($data);
+        session()->setFlashdata('success','Berhasil Disimpan');
+        return redirect()->to('lapor/show_admin/'.$noref);
     }
     public function store()
     {
@@ -69,6 +144,12 @@ class Lapor extends BaseController
                         'required' => 'Tanggal harus diisi.',
                     ]
                 ],
+                'tujuan' => [
+                    'rules' => "required",
+                    'errors' => [
+                        'required' => 'Tujuan harus diisi.',
+                    ]
+                ],
                 'foto' => [
                     'rules' => 'max_size[foto,3072]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png,image/JPG]',
                     'errors' => [
@@ -84,6 +165,7 @@ class Lapor extends BaseController
             $lokasi = $this->request->getVar('lokasi');
             $isi = $this->request->getVar('isi');
             $tgl = $this->request->getVar('tgl');
+            $tujuan = $this->request->getVar('tujuan');
             $tgl = strtotime($tgl);
             $tgl = date('Y-m-d',$tgl);
             $fileFoto = $this->request->getFile('foto');
@@ -96,6 +178,7 @@ class Lapor extends BaseController
                 'lokasi' => $lokasi,
                 'isi' => $isi,
                 'tgl' => $tgl,
+                'tujuan' => $tujuan,
                 'foto' => $namaFoto,
                 'inputby' => gettime().";".user()->username,
             ];

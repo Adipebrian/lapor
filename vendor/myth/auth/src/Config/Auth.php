@@ -123,7 +123,7 @@ class Auth extends BaseConfig
      *
      * @var string[]
      */
-    public $personalFields = ['image', 'jurusan'];
+    public $personalFields = ['image'];
 
     /**
      * --------------------------------------------------------------------

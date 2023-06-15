@@ -61,10 +61,11 @@
            </li>
          <?php endif; ?>
 
+
          <li class="nav-header"><b>PENGADUAN</b></li>
-         <li class="nav-item  <?= ($uri->getSegment(1) == "lapor") ? 'menu-open' : '' ?>">
+         <li class="nav-item <?= ($uri->getSegment(1) == "lapor") ? 'menu-open' : '' ?>">
            <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor") ? 'active' : '' ?>">
-             <i class="nav-icon fas fa-user-alt"></i>
+             <i class="nav-icon fas fa-address-card"></i>
              <p>
                Pengaduan
                <i class="right fas fa-angle-left"></i>
@@ -72,13 +73,39 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
+              <?php if(has_permission('admin-jurusan')): ?>
+               <a href="<?= base_url() ?>/lapor/data_admin" class="nav-link <?= ($uri->getSegment(2) == "data") ? 'active' : '' ?>">
+                 <?= ($uri->getSegment(2) == "data") ? '<i class="far fa-solid fa-circle-dot nav-icon"></i>' : '<i class="far fa-circle nav-icon"></i>' ?>
+                 <p>Data</p>
+               </a>
+               <?php else: ?>
                <a href="<?= base_url() ?>/lapor/data" class="nav-link <?= ($uri->getSegment(2) == "data") ? 'active' : '' ?>">
                  <?= ($uri->getSegment(2) == "data") ? '<i class="far fa-solid fa-circle-dot nav-icon"></i>' : '<i class="far fa-circle nav-icon"></i>' ?>
                  <p>Data</p>
                </a>
+               <?php endif; ?>
              </li>
            </ul>
          </li>
+
+         <!-- <li class="nav-header"><b>LAPORAN</b></li>
+         <li class="nav-item  <?= ($uri->getSegment(1) == "lapor") ? 'menu-open' : '' ?>">
+           <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor") ? 'active' : '' ?>">
+             <i class="nav-icon fas fa-file"></i>
+             <p>
+               Laporan
+               <i class="right fas fa-angle-left"></i>
+             </p>
+           </a>
+           <ul class="nav nav-treeview">
+             <li class="nav-item">
+               <a href="<?= base_url() ?>/lapor/data" class="nav-link <?= ($uri->getSegment(2) == "data") ? 'active' : '' ?>">
+                 <?= ($uri->getSegment(2) == "data") ? '<i class="far fa-solid fa-circle-dot nav-icon"></i>' : '<i class="far fa-circle nav-icon"></i>' ?>
+                 <p>Pengaduan</p>
+               </a>
+             </li>
+           </ul>
+         </li> -->
          <li class="nav-header"><b>USER</b></li>
          <li class="nav-item  <?= ($uri->getSegment(1) == "user") ? 'menu-open' : '' ?>">
            <a href="#" class="nav-link <?= ($uri->getSegment(1) == "user") ? 'active' : '' ?>">
@@ -109,6 +136,9 @@
              </li>
            </ul>
          </li>
+
+         
+        
        </ul>
      </nav>
      <!-- /.sidebar-menu -->
