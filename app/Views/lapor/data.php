@@ -36,6 +36,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th>Jenis Laporan</th>
+                                        <th>Pengirim</th>
                                         <th>Judul</th>
                                         <th>Lokasi</th>
                                         <th>Tanggal</th>
@@ -48,6 +50,8 @@
                                     <?php foreach ($result as $r) : ?>
                                         <tr>
                                             <td><?= $i++ ?></td>
+                                            <td><?= $r->jenis ?></td>
+                                            <td><?= (get_info($r->user_id) ? get_info($r->user_id)->username : "Anonim") ?></td>
                                             <td><?= $r->judul ?></td>
                                             <td><?= $r->lokasi ?></td>
                                             <td><?= $r->tgl ?></td>
@@ -59,11 +63,11 @@
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <?php if(has_permission('admin-jurusan')): ?>
-                                                <a href="<?= base_url() ?>/lapor/show_admin/<?= $r->noref ?>" target="_blank" class="badge badge-success">Lihat Pengaduan</a>
-                                                <?php else: ?>
+                                                <?php if (has_permission('admin-jurusan')) : ?>
+                                                    <a href="<?= base_url() ?>/lapor/show_admin/<?= $r->noref ?>" target="_blank" class="badge badge-success">Lihat Pengaduan</a>
+                                                <?php else : ?>
                                                     <a href="<?= base_url() ?>/lapor/show/<?= $r->noref ?>" target="_blank" class="badge badge-success">Lihat Pengaduan</a>
-                                                    <?php endif; ?>
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -71,8 +75,12 @@
                                 <tfoot>
                                     <tr>
                                         <th>No</th>
-                                        <th>Username</th>
+                                        <th>Jenis Laporan</th>
+                                        <th>Pengirim</th>
                                         <th>Judul</th>
+                                        <th>Lokasi</th>
+                                        <th>Tanggal</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>

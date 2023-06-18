@@ -63,8 +63,8 @@
 
 
          <li class="nav-header"><b>PENGADUAN</b></li>
-         <li class="nav-item <?= ($uri->getSegment(1) == "lapor") ? 'menu-open' : '' ?>">
-           <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor") ? 'active' : '' ?>">
+         <li class="nav-item <?= ($uri->getSegment(1) == "lapor"&& $uri->getSegment(2) == "data" ||$uri->getSegment(2) == "data_admin") ? 'menu-open' : '' ?>">
+           <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor"&& $uri->getSegment(2) == "data"||$uri->getSegment(2) == "data_admin") ? 'active' : '' ?>">
              <i class="nav-icon fas fa-address-card"></i>
              <p>
                Pengaduan
@@ -74,8 +74,8 @@
            <ul class="nav nav-treeview">
              <li class="nav-item">
               <?php if(has_permission('admin-jurusan')): ?>
-               <a href="<?= base_url() ?>/lapor/data_admin" class="nav-link <?= ($uri->getSegment(2) == "data") ? 'active' : '' ?>">
-                 <?= ($uri->getSegment(2) == "data") ? '<i class="far fa-solid fa-circle-dot nav-icon"></i>' : '<i class="far fa-circle nav-icon"></i>' ?>
+               <a href="<?= base_url() ?>/lapor/data_admin" class="nav-link <?= ($uri->getSegment(2) == "data_admin") ? 'active' : '' ?>">
+                 <?= ($uri->getSegment(2) == "data_admin") ? '<i class="far fa-solid fa-circle-dot nav-icon"></i>' : '<i class="far fa-circle nav-icon"></i>' ?>
                  <p>Data</p>
                </a>
                <?php else: ?>
@@ -88,9 +88,10 @@
            </ul>
          </li>
 
-         <!-- <li class="nav-header"><b>LAPORAN</b></li>
-         <li class="nav-item  <?= ($uri->getSegment(1) == "lapor") ? 'menu-open' : '' ?>">
-           <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor") ? 'active' : '' ?>">
+         <?php if(has_permission('admin-jurusan')): ?>
+         <li class="nav-header"><b>LAPORAN</b></li>
+         <li class="nav-item  <?= ($uri->getSegment(1) == "lapor" && $uri->getSegment(2) == "laporan") ? 'menu-open' : '' ?>">
+           <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor" && $uri->getSegment(2) == "laporan") ? 'active' : '' ?>">
              <i class="nav-icon fas fa-file"></i>
              <p>
                Laporan
@@ -99,13 +100,14 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="<?= base_url() ?>/lapor/data" class="nav-link <?= ($uri->getSegment(2) == "data") ? 'active' : '' ?>">
+               <a href="<?= base_url() ?>/lapor/laporan" class="nav-link <?= ($uri->getSegment(2) == "laporan") ? 'active' : '' ?>">
                  <?= ($uri->getSegment(2) == "data") ? '<i class="far fa-solid fa-circle-dot nav-icon"></i>' : '<i class="far fa-circle nav-icon"></i>' ?>
                  <p>Pengaduan</p>
                </a>
              </li>
            </ul>
-         </li> -->
+         </li>
+         <?php endif; ?>
          <li class="nav-header"><b>USER</b></li>
          <li class="nav-item  <?= ($uri->getSegment(1) == "user") ? 'menu-open' : '' ?>">
            <a href="#" class="nav-link <?= ($uri->getSegment(1) == "user") ? 'active' : '' ?>">

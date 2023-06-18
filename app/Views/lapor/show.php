@@ -33,7 +33,7 @@
                                 <dt class="col-md-4"><b>No. Referensi</b></dt>
                                 <dd class="col-md-8">: <?= $result->noref ?></dd>
                                 <dt class="col-md-4"><b>Pengirim</b></dt>
-                                <dd class="col-md-8">: <?= get_info($result->user_id)->username ?></dd>
+                                <dd class="col-md-8">: <?= (get_info($result->user_id)?get_info($result->user_id)->username:"Anonim") ?></dd>
                                 <dt class="col-md-4"><b>Judul</b></dt>
                                 <dd class="col-md-8">: <?= $result->judul ?></dd>
                                 <dt class="col-md-4"><b>Isi</b></dt>

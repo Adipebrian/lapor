@@ -65,8 +65,8 @@ class Admin extends BaseController
     }
     public function change_role_user()
     {
-        $group = $this->mRequest->getVar('group');
-        $user = $this->mRequest->getVar('user_id');
+        $group = $this->request->getVar('group');
+        $user = $this->request->getVar('user_id');
 
         $this->builder = $this->db->table('auth_groups_users');
         $this->builder->select('*');
@@ -89,8 +89,8 @@ class Admin extends BaseController
     }
     public function add_role_user()
     {
-        $group = $this->mRequest->getVar('group');
-        $user = $this->mRequest->getVar('user_id');
+        $group = $this->request->getVar('group');
+        $user = $this->request->getVar('user_id');
 
         $this->builder = $this->db->table('auth_groups_users');
         $this->builder->select('*');
@@ -138,7 +138,7 @@ class Admin extends BaseController
     }
     public function delete_user()
     {
-        $id = $this->mRequest->getVar('id');
+        $id = $this->request->getVar('id');
         $this->builder = $this->db->table('users');
         $this->builder->where('id', $id);
         $this->builder->update(['deleted_at' => $this->time, 'active' => 0]);
@@ -147,9 +147,9 @@ class Admin extends BaseController
     }
     public function edit_user()
     {
-        $id = $this->mRequest->getVar('id');
-        $username = $this->mRequest->getVar('username');
-        $email = $this->mRequest->getVar('email');
+        $id = $this->request->getVar('id');
+        $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
         $rules = [
             'username' => 'required|alpha_numeric_space|min_length[3]|max_length[30]',
             'email'    => 'required|valid_email',
@@ -174,8 +174,8 @@ class Admin extends BaseController
     }
     public function change_pass()
     {
-        $id = $this->mRequest->getVar('id');
-        $password = $this->mRequest->getVar('pass');
+        $id = $this->request->getVar('id');
+        $password = $this->request->getVar('pass');
         $users = model(UserModel::class);
         $user = $users->where('id', $id)
             ->first();
@@ -209,23 +209,30 @@ class Admin extends BaseController
         $this->builder->select('*');
         $this->builder->orderBy('id', 'DESC');
         $perm_all = $this->builder->get()->getResult();
+        $this->builder = $this->db->table('auth_groups_permissions');
+        $this->builder->select('auth_groups.name as gn,auth_permissions.name as pn,group_id,permission_id');
+        $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_permissions.group_id');
+        $this->builder->join('auth_permissions', 'auth_permissions.id = auth_groups_permissions.permission_id');
+        $this->builder->orderBy('group_id', 'ASC');
+        $group = $this->builder->get()->getResult();
 
         $data = [
             'title' => 'SIPPOLSUB | Data Role ',
             'uri' => $this->uri,
             'group_all' => $group_all,
             'perm_all' => $perm_all,
+            'group' => $group,
         ];
         return view('admin/role', $data);
     }
     public function change_role()
     {
-        $id_g = $this->mRequest->getVar('id_g');
-        $name_g = $this->mRequest->getVar('name_g');
-        $desc_g = $this->mRequest->getVar('desc_g');
-        $id_p = $this->mRequest->getVar('id_p');
-        $name_p = $this->mRequest->getVar('name_p');
-        $desc_p = $this->mRequest->getVar('desc_p');
+        $id_g = $this->request->getVar('id_g');
+        $name_g = $this->request->getVar('name_g');
+        $desc_g = $this->request->getVar('desc_g');
+        $id_p = $this->request->getVar('id_p');
+        $name_p = $this->request->getVar('name_p');
+        $desc_p = $this->request->getVar('desc_p');
 
         if ($id_g) {
             $this->builder = $this->db->table('auth_groups');
@@ -268,10 +275,10 @@ class Admin extends BaseController
     }
     public function add_role()
     {
-        $name_g = $this->mRequest->getVar('name_g');
-        $desc_g = $this->mRequest->getVar('desc_g');
-        $name_p = $this->mRequest->getVar('name_p');
-        $desc_p = $this->mRequest->getVar('desc_p');
+        $name_g = $this->request->getVar('name_g');
+        $desc_g = $this->request->getVar('desc_g');
+        $name_p = $this->request->getVar('name_p');
+        $desc_p = $this->request->getVar('desc_p');
 
         if ($name_g) {
             $this->builder = $this->db->table('auth_groups');
@@ -312,8 +319,8 @@ class Admin extends BaseController
     }
     public function delete_role()
     {
-        $id_g = $this->mRequest->getVar('id_g');
-        $id_p = $this->mRequest->getVar('id_p');
+        $id_g = $this->request->getVar('id_g');
+        $id_p = $this->request->getVar('id_p');
 
         if ($id_g) {
             $this->builder = $this->db->table('auth_groups');
@@ -363,12 +370,12 @@ class Admin extends BaseController
             'group_all' => $group_all,
             'perm_all' => $perm_all,
         ];
-        return view('admin/role_perm', $data);
+        return view('admin/role', $data);
     }
     public function change_role_perm()
     {
-        $group = $this->mRequest->getVar('group');
-        $perm = $this->mRequest->getVar('perm');
+        $group = $this->request->getVar('group');
+        $perm = $this->request->getVar('perm');
 
         $this->builder = $this->db->table('auth_groups_permissions');
         $this->builder->select('*');
@@ -387,12 +394,12 @@ class Admin extends BaseController
         } else {
             session()->setFlashdata('failed', 'Failed!');
         }
-        return redirect()->to('admin/role_perm');
+        return redirect()->to('admin/role');
     }
     public function add_role_perm()
     {
-        $group = $this->mRequest->getVar('group');
-        $perm = $this->mRequest->getVar('perm');
+        $group = $this->request->getVar('group');
+        $perm = $this->request->getVar('perm');
 
         $this->builder = $this->db->table('auth_groups_permissions');
         $this->builder->select('*');
@@ -410,108 +417,9 @@ class Admin extends BaseController
             $this->builder->insert($data);
             session()->setFlashdata('success', 'Success!');
         }
-        return redirect()->to('admin/role_perm');
+        return redirect()->to('admin/role');
     }
     //  End GROUP AND PERM
-
-    //--------------------------------------------------------------------
-    // APPROVE
-    //--------------------------------------------------------------------
-
-    /**
-     * Menampilkan beberapa fungsi yang ada 
-     * di dalam menu APPROVE
-     */
-
-    public function approve()
-    {
-        $result = $this->db->table('tblock')->where(['sts' => 3])->get()->getResult();
-        $data = [
-            'title' => 'SIPPOLSUB | Data Approval',
-            'uri' => $this->uri,
-            'result' => $result,
-        ];
-        return view('admin/approve', $data);
-    }
-    public function approve_action()
-    {
-        $data = [
-            'sts' => 5,
-            'tglakhir' => $this->time->addMinutes($this->request->getVar('tglakhir')),
-            'editby' => $this->time->toDateString() . ";" . getusername()
-        ];
-        $this->db->table('tblock')->where('noref', $this->request->getVar('noref'))->update($data);
-        session()->setFlashdata('success', 'Success');
-        return redirect()->to('admin/approve');
-    }
-    //  End APPROVE
-
-    //--------------------------------------------------------------------
-    // LOG
-    //--------------------------------------------------------------------
-
-    /**
-     * Menampilkan beberapa fungsi yang ada 
-     * di dalam menu LOG
-     */
-    public function log()
-    {
-        $data = [
-            'title' => 'SIPPOLSUB | Data Log',
-            'uri' => $this->uri,
-            'result' => null,
-            'nomor' => null
-        ];
-        return view('admin/log', $data);
-    }
-    public function log_result()
-    {
-        $result = $this->db->table('tblog')->where('nomor', $this->request->getVar('nomor'))->get()->getResult();
-        $data = [
-            'title' => 'SIPPOLSUB | Data Log',
-            'uri' => $this->uri,
-            'result' => $result,
-            'old' => null,
-            'new' => null,
-            'nomor' => $this->request->getVar('nomor')
-        ];
-        if ($result) {
-            return view('admin/log', $data);
-        }
-        session()->setFlashdata('failed', 'Tidak ditemukan!');
-        return redirect()->to('admin/log')->withInput();
-    }
-    public function log_cek()
-    {
-        $result = $this->db->table('tblog')->where('nomor', $this->request->getVar('nomor'))->get()->getResult();
-        $cek = $this->db->table('tblog')->where('id', $this->request->getVar('id'))->get()->getRow();
-        $ket = explode(' : ', $cek->ket);
-        $old = '';
-        $new = '';
-        foreach ($ket as $x => $k) {
-            if ($x == 1) {
-                $old .= $k;
-            } else if ($x == 3) {
-                $new .= $k;
-            }
-        }
-        $old = explode(',', $old);
-        $new = explode(',', $new);
-
-        $data = [
-            'title' => 'SIPPOLSUB | Data Log',
-            'uri' => $this->uri,
-            'result' => $result,
-            'old' => $old,
-            'new' => $new,
-            'cek' => $this->request->getVar('cek'),
-            'nomor' => $this->request->getVar('nomor')
-        ];
-        return view('admin/log', $data);
-    }
-
-    //  End LOG
-
 
 
 }

@@ -1,0 +1,394 @@
+CRITICAL - 2023-06-18 17:26:49 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\Lapor.php on line 104.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('lapor/store')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('lapor/store')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('lapor/store')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 17:32:31 --> syntax error, unexpected token ";"
+in APPPATH\Controllers\Lapor.php on line 203.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('lapor/store')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('lapor/store')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('lapor/store')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 17:54:16 --> Attempt to read property "id" on null
+in APPPATH\Controllers\Lapor.php on line 189.
+ 1 APPPATH\Controllers\Lapor.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Controllers\\Lapor.php', 189)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 17:55:06 --> Attempt to read property "username" on null
+in APPPATH\Controllers\Lapor.php on line 199.
+ 1 APPPATH\Controllers\Lapor.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on null', 'APPPATH\\Controllers\\Lapor.php', 199)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-18 17:55:21 --> mysqli_sql_exception: Column 'user_id' cannot be null in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(201): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->store()
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-18 17:55:21 --> Column 'user_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (\'2023060009\', \'tes\', NULL, \'tes\', \'tes\', \'2023-06-18\', \'J1\', \'Aspirasi\', 1, \'2023060009.jpeg\', \'2023-06-18 17:55:21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (\'2023060009\', \'tes\', NULL, \'tes\', \'tes\', \'2023-06-18\', \'J1\', \'Aspirasi\', 1, \'2023060009.jpeg\', \'2023-06-18 17:55:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (\'2023060009\', \'tes\', NULL, \'tes\', \'tes\', \'2023-06-18\', \'J1\', \'Aspirasi\', 1, \'2023060009.jpeg\', \'2023-06-18 17:55:21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (:noref:, :judul:, :user_id:, :lokasi:, :isi:, :tgl:, :tujuan:, :jenis:, :anonim:, :foto:, :inputby:)', [...], false)
+ 5 APPPATH\Controllers\Lapor.php(201): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 17:55:40 --> Attempt to read property "id" on null
+in APPPATH\Controllers\Lapor.php on line 105.
+ 1 APPPATH\Controllers\Lapor.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Controllers\\Lapor.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-18 17:58:35 --> mysqli_sql_exception: Duplicate entry '2023060001' for key 'PRIMARY' in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Lapor.php(201): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Lapor->store()
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-18 17:58:35 --> Duplicate entry '2023060001' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (\'2023060001\', \'tes\', 0, \'tes\', \'tes\', \'2023-06-18\', \'J1\', \'Aspirasi\', 1, \'2023060001.jpeg\', \'2023-06-18 17:58:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (\'2023060001\', \'tes\', 0, \'tes\', \'tes\', \'2023-06-18\', \'J1\', \'Aspirasi\', 1, \'2023060001.jpeg\', \'2023-06-18 17:58:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (\'2023060001\', \'tes\', 0, \'tes\', \'tes\', \'2023-06-18\', \'J1\', \'Aspirasi\', 1, \'2023060001.jpeg\', \'2023-06-18 17:58:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbreport` (`noref`, `judul`, `user_id`, `lokasi`, `isi`, `tgl`, `tujuan`, `jenis`, `anonim`, `foto`, `inputby`) VALUES (:noref:, :judul:, :user_id:, :lokasi:, :isi:, :tgl:, :tujuan:, :jenis:, :anonim:, :foto:, :inputby:)', [...], false)
+ 5 APPPATH\Controllers\Lapor.php(201): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->store()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:03:24 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\lapor\data.php on line 52.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/data', [], true)
+ 4 APPPATH\Controllers\Lapor.php(37): view('lapor/data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data_admin()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:03:35 --> Attempt to read property "username" on null
+in APPPATH\Views\lapor\data.php on line 52.
+ 1 APPPATH\Views\lapor\data.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on null', 'APPPATH\\Views\\lapor\\data.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/data', [], true)
+ 5 APPPATH\Controllers\Lapor.php(37): view('lapor/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:05:22 --> Attempt to read property "username" on null
+in APPPATH\Views\lapor\show.php on line 36.
+ 1 APPPATH\Views\lapor\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on null', 'APPPATH\\Views\\lapor\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 5 APPPATH\Controllers\Lapor.php(77): view('lapor/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060009')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:06:34 --> Undefined variable $r
+in APPPATH\Views\lapor\show.php on line 36.
+ 1 APPPATH\Views\lapor\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $r', 'APPPATH\\Views\\lapor\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 5 APPPATH\Controllers\Lapor.php(77): view('lapor/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060009')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:06:55 --> Undefined variable $r
+in APPPATH\Views\lapor\show.php on line 36.
+ 1 APPPATH\Views\lapor\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $r', 'APPPATH\\Views\\lapor\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 5 APPPATH\Controllers\Lapor.php(77): view('lapor/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060009')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:06:57 --> Undefined variable $r
+in APPPATH\Views\lapor\show.php on line 36.
+ 1 APPPATH\Views\lapor\show.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $r', 'APPPATH\\Views\\lapor\\show.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/show', [], true)
+ 5 APPPATH\Controllers\Lapor.php(77): view('lapor/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->show_admin('2023060009')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:52:25 --> Undefined variable $tgl
+in APPPATH\Controllers\Lapor.php on line 215.
+ 1 APPPATH\Controllers\Lapor.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tgl', 'APPPATH\\Controllers\\Lapor.php', 215)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:52:38 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\lapor\laporan.php on line 102.
+ 1 APPPATH\Views\lapor\laporan.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\lapor\\laporan.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/laporan', [], true)
+ 5 APPPATH\Controllers\Lapor.php(220): view('lapor/laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 18:52:39 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\lapor\laporan.php on line 102.
+ 1 APPPATH\Views\lapor\laporan.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\lapor\\laporan.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/laporan', [], true)
+ 5 APPPATH\Controllers\Lapor.php(220): view('lapor/laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 19:21:25 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Lapor.php on line 227.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Lapor.php', 227)
+ 2 APPPATH\Controllers\Lapor.php(227): explode(' s/d ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan_action()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 19:21:34 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Lapor.php on line 227.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Lapor.php', 227)
+ 2 APPPATH\Controllers\Lapor.php(227): explode(' s/d ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan_action()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 19:23:45 --> Undefined variable $group
+in APPPATH\Views\admin\role.php on line 135.
+ 1 APPPATH\Views\admin\role.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $group', 'APPPATH\\Views\\admin\\role.php', 135)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\role.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/role', [], true)
+ 5 APPPATH\Controllers\Admin.php(219): view('admin/role', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->role()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 19:26:56 --> Undefined variable $group
+in APPPATH\Views\admin\role.php on line 135.
+ 1 APPPATH\Views\admin\role.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $group', 'APPPATH\\Views\\admin\\role.php', 135)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\role.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/role', [], true)
+ 5 APPPATH\Controllers\Admin.php(219): view('admin/role', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->role()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:17:47 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Lapor.php on line 227.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Lapor.php', 227)
+ 2 APPPATH\Controllers\Lapor.php(227): explode(' s/d ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan_action()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:18:16 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Controllers\Lapor.php on line 227.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Lapor.php', 227)
+ 2 APPPATH\Controllers\Lapor.php(227): explode(' s/d ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan_action()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:23:50 --> Unmatched ')'
+in APPPATH\Views\layout\sidebar.php on line 94.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/sidebar', null, true)
+ 3 APPPATH\Views\layout\dashboard.php(152): CodeIgniter\View\View->include('layout/sidebar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 7 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/data', [], true)
+ 8 APPPATH\Controllers\Lapor.php(37): view('lapor/data', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->data_admin()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:23:58 --> Unmatched ')'
+in APPPATH\Views\layout\sidebar.php on line 94.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/sidebar', null, true)
+ 3 APPPATH\Views\layout\dashboard.php(152): CodeIgniter\View\View->include('layout/sidebar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\dashboard.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard', [], true)
+ 7 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('user/index', [], true)
+ 8 APPPATH\Controllers\User.php(41): view('user/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\User->index()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:30:26 --> Undefined variable $validation
+in APPPATH\Views\home\cek.php on line 93.
+ 1 APPPATH\Views\home\cek.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\home\\cek.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home/cek', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('home/cek', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:36:51 --> Undefined variable $result
+in APPPATH\Views\home\cek.php on line 81.
+ 1 APPPATH\Views\home\cek.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Views\\home\\cek.php', 81)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home/cek', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('home/cek', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:39:33 --> Undefined variable $result
+in APPPATH\Views\home\cek.php on line 73.
+ 1 APPPATH\Views\home\cek.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Views\\home\\cek.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home/cek', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('home/cek', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:39:52 --> Undefined variable $result
+in APPPATH\Controllers\Home.php on line 28.
+ 1 APPPATH\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Home.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->cek()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:39:56 --> Undefined variable $result
+in APPPATH\Controllers\Home.php on line 28.
+ 1 APPPATH\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Home.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->cek()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:39:58 --> Attempt to read property "user_id" on null
+in APPPATH\Views\home\cek.php on line 108.
+ 1 APPPATH\Views\home\cek.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'APPPATH\\Views\\home\\cek.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home/cek', [], true)
+ 5 APPPATH\Controllers\Home.php(30): view('home/cek', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:49:06 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\Home.php on line 53.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/cek')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/cek')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/cek')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:52:35 --> syntax error, unexpected identifier "dd"
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/cek')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/cek')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/cek')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:52:37 --> syntax error, unexpected identifier "dd"
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/cek')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/cek')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/cek')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:53:03 --> syntax error, unexpected variable "$noref"
+in APPPATH\Controllers\Home.php on line 36.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/cek')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/cek')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/cek')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:58:44 --> syntax error, unexpected identifier "s"
+in APPPATH\Controllers\Home.php on line 39.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/show')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/show')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/show')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 21:58:46 --> syntax error, unexpected identifier "s"
+in APPPATH\Controllers\Home.php on line 39.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/show')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/show')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/show')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 22:00:16 --> Attempt to read property "user_id" on null
+in APPPATH\Controllers\Home.php on line 39.
+ 1 APPPATH\Controllers\Home.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'APPPATH\\Controllers\\Home.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->show()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 22:01:14 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\Home.php on line 40.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('home/show')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('home/show')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('home/show')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 22:29:34 --> Attempt to read property "user_id" on null
+in APPPATH\Controllers\Home.php on line 39.
+ 1 APPPATH\Controllers\Home.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'APPPATH\\Controllers\\Home.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->show()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 22:29:52 --> Attempt to read property "user_id" on null
+in APPPATH\Controllers\Home.php on line 39.
+ 1 APPPATH\Controllers\Home.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'APPPATH\\Controllers\\Home.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->show()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()

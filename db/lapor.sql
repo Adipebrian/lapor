@@ -11,7 +11,7 @@
  Target Server Version : 100424
  File Encoding         : 65001
 
- Date: 15/06/2023 23:16:50
+ Date: 18/06/2023 22:33:26
 */
 
 SET NAMES utf8mb4;
@@ -43,7 +43,7 @@ CREATE TABLE `auth_groups`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 69 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_groups
@@ -119,7 +119,7 @@ CREATE TABLE `auth_logins`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `email`(`email`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_logins
@@ -161,6 +161,18 @@ INSERT INTO `auth_logins` VALUES (34, '::1; Chrome', 'superadmin@admin.com', 1, 
 INSERT INTO `auth_logins` VALUES (35, '::1; Chrome', 'user1@user.com', 91, '2023-06-15 23:08:11', 1);
 INSERT INTO `auth_logins` VALUES (36, '::1; Chrome', 'admin@admin.com', NULL, '2023-06-15 23:08:36', 0);
 INSERT INTO `auth_logins` VALUES (37, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-15 23:08:45', 1);
+INSERT INTO `auth_logins` VALUES (38, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 18:02:25', 1);
+INSERT INTO `auth_logins` VALUES (39, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 18:44:29', 1);
+INSERT INTO `auth_logins` VALUES (40, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-18 19:22:27', 1);
+INSERT INTO `auth_logins` VALUES (41, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 21:21:03', 1);
+INSERT INTO `auth_logins` VALUES (42, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 22:24:28', 1);
+INSERT INTO `auth_logins` VALUES (43, '::1; Chrome', 'user1', NULL, '2023-06-18 22:25:14', 0);
+INSERT INTO `auth_logins` VALUES (44, '::1; Chrome', 'user1@user.com', 91, '2023-06-18 22:25:23', 1);
+INSERT INTO `auth_logins` VALUES (45, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 22:26:37', 1);
+INSERT INTO `auth_logins` VALUES (46, '::1; Chrome', 'user1@user.com', 91, '2023-06-18 22:27:04', 1);
+INSERT INTO `auth_logins` VALUES (47, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 22:30:14', 1);
+INSERT INTO `auth_logins` VALUES (48, '::1; Chrome', 'admin3@admin.com', 89, '2023-06-18 22:31:03', 1);
+INSERT INTO `auth_logins` VALUES (49, '::1; Chrome', 'admin2@admin.com', 88, '2023-06-18 22:31:18', 1);
 
 -- ----------------------------
 -- Table structure for auth_permissions
@@ -171,7 +183,7 @@ CREATE TABLE `auth_permissions`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_permissions
@@ -262,11 +274,13 @@ CREATE TABLE `tbreport`  (
   `user_id` int(100) NOT NULL COMMENT 'pengirim\r\n',
   `judul` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `isi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `jenis` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `tujuan` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'kode jurusan',
   `tgl` date NULL DEFAULT NULL,
   `lokasi` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `foto` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `sts` int(2) NULL DEFAULT NULL,
+  `anonim` int(2) NULL DEFAULT NULL COMMENT '1=anonim',
   `inputby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `editby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `deleteby` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -276,14 +290,10 @@ CREATE TABLE `tbreport`  (
 -- ----------------------------
 -- Records of tbreport
 -- ----------------------------
-INSERT INTO `tbreport` VALUES ('2023060001', 1, 'Matematika', 'tes', 'J1', '2023-06-15', 'tes', '2023060001.png', 1, '2023-06-05 22:04:23;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060002', 1, 'Matematika', 'tes', 'J2', '2023-06-15', 'tes', '2023060002.png', NULL, '2023-06-05 22:07:44;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060003', 1, 'Matematika', 'tes', 'J3', '2023-06-28', 'tes', '2023060003.png', NULL, '2023-06-05 22:08:35;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060004', 1, 'Matematika', 'tes', 'J4', '2023-06-28', 'tes', '2023060004.png', NULL, '2023-06-05 22:09:09;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060005', 1, 'Sampa berserakan', 'testin', 'J1', '2023-06-11', 'Halaman Kampus', '2023060005.png', 1, '2023-06-07 20:04:01;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060006', 1, 'Kebersihan Ruangan', 'Testing', 'J3', '2023-06-04', 'Ruangan', '2023060006.png', NULL, '2023-06-07 20:08:50;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060007', 1, 'tes', 'tes', 'J1', '2023-06-20', 'tes', '2023060007.png', 1, '2023-06-14 23:25:53;administrator', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060008', 91, 'Temuan Sampah', 'Sampah Berserakan', 'J1', '2023-06-15', 'Halaman Kampus', '2023060008.png', 1, '2023-06-15 23:12:42;User Agroindustri', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060001', 87, 'Jadwal Perkuliahan', 'Jadwal Perkuliahan Jurusan Manajemen Informatika', 'Informasi', 'J2', '2023-06-18', 'Kampus', '2023060001.jpeg', NULL, 0, '2023-06-18 22:17:02', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060002', 0, 'Jadwal Perkuliahan', 'Jadwal Perkuliahan Informatika', 'Informasi', 'J2', '2023-06-18', 'Kampus', '2023060002.jpeg', NULL, 1, '2023-06-18 22:20:56', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060003', 0, 'tes', 'tes', 'Aspirasi', 'J1', '2023-06-18', 'tes', '2023060003.jpeg', NULL, 1, '2023-06-18 22:24:17', NULL, NULL);
+INSERT INTO `tbreport` VALUES ('2023060004', 91, 'tes', 'tes', 'Aspirasi', 'J1', '2023-06-18', 'tes', '2023060004.jpeg', NULL, 0, '2023-06-18 22:25:51', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tbreport_d
@@ -302,14 +312,6 @@ CREATE TABLE `tbreport_d`  (
 -- ----------------------------
 -- Records of tbreport_d
 -- ----------------------------
-INSERT INTO `tbreport_d` VALUES ('2023060005', 1, '2023-06-15 00:00:00', 87, 'tes', '2023-06-15 22:46:02;87');
-INSERT INTO `tbreport_d` VALUES ('2023060005', 2, '2023-06-15 22:56:14', 87, 'tes2', '2023-06-15 22:52:28;87');
-INSERT INTO `tbreport_d` VALUES ('2023060005', 3, '2023-06-15 22:56:18', 87, 'tes\r\n3\r\n', '2023-06-15 22:54:12;87');
-INSERT INTO `tbreport_d` VALUES ('2023060005', 4, '2023-06-15 22:58:17', 87, 'tes4', '2023-06-15 22:58:17;87');
-INSERT INTO `tbreport_d` VALUES ('2023060005', 5, '2023-06-15 23:06:40', 1, 'tes2', '2023-06-15 23:06:40;1');
-INSERT INTO `tbreport_d` VALUES ('2023060007', 1, '2023-06-15 22:58:45', 87, 'tes1', '2023-06-15 22:58:45;87');
-INSERT INTO `tbreport_d` VALUES ('2023060008', 1, '2023-06-15 23:14:32', 87, 'Oke noted\r\n', '2023-06-15 23:14:32;87');
-INSERT INTO `tbreport_d` VALUES ('2023060008', 2, '2023-06-15 23:15:03', 91, 'Baik Terimakasih', '2023-06-15 23:15:03;91');
 
 -- ----------------------------
 -- Table structure for users

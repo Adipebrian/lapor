@@ -32,6 +32,9 @@
 						<li class="nav-item">
 							<a class="nav-link text-white" href="#contact">Contact</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="<?= base_url() ?>/home/cek">Cek Pengaduan</a>
+						</li>
 					</ul>
 					<?php if (!logged_in()) : ?>
 						<a href="<?= base_url() ?>/login" class="btn btn-c">Login</a>
@@ -81,6 +84,17 @@
 					<form class="p-3 row	" action="<?= base_url() ?>/lapor/store" enctype="multipart/form-data" method="post">
 						<?= csrf_field() ?>
 						<div class="col-md-12 mb-3">
+							<select name="jenis" id="jenis" class="form-control" required>
+								<option value="" disabled selected>-- Pilih Jenis Laporan --</option>
+								<option value="Aspirasi"> Aspirasi </option>
+								<option value="Pengaduan"> Pengaduan </option>
+								<option value="Informasi"> Informasi </option>
+							</select>
+							<div class="invalid-feedback">
+								<?= $validation->getError('jenis') ?>
+							</div>
+						</div>
+						<div class="col-md-12 mb-3">
 							<input type="text" required class="form-control <?= ($validation->getError('judul') ? 'is-invalid' : '') ?>" placeholder="Judul Laporan" name="judul" value="<?= (old('judul') ? old('judul') : '') ?>">
 							<div class="invalid-feedback">
 								<?= $validation->getError('judul') ?>
@@ -114,9 +128,9 @@
 						<div class="col-md-12 mb-3">
 							<select name="tujuan" id="tujuan" class="form-control" required>
 								<option value="" disabled selected>-- Pilih Tujuan --</option>
-								<?php foreach($tujuan as$t): ?>
-									<option value="<?=$t->kode ?>"> <?= $t->jurusan ?></option>
-									<?php endforeach; ?>
+								<?php foreach ($tujuan as $t) : ?>
+									<option value="<?= $t->kode ?>"> <?= $t->jurusan ?></option>
+								<?php endforeach; ?>
 							</select>
 							<div class="invalid-feedback">
 								<?= $validation->getError('lokasi') ?>
@@ -136,24 +150,31 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-md-12 mb-3">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="anonim">
+								<label class="form-check-label" for="inlineCheckbox1">Anonim</label>
+							</div>
+						</div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 				</div>
 			</div>
 		</section>
 		<div class="flash-data-warning" data-flashdata="<?= session()->getFlashdata('failed'); ?>"></div>
+		<div class="flash-data-success" data-flashdata="<?= session()->getFlashdata('success'); ?>"></div>
 
 		<section class="container d-flex flex-column justify-content-center align-items-center" style="padding-top: 7%; padding-bottom: 7%;" id="about">
 			<h3><b>Tentang Kami</b></h3>
 			<p class="text-center">Sistem pengaduan Politeknik Negeri Subang adalah sebuah platform atau mekanisme yang digunakan untuk mengelola dan menangani pengaduan yang diajukan oleh mahasiswa, staf, atau pihak terkait terhadap masalah, masukan, atau permasalahan yang terkait dengan lingkungan kampus.</p>
 		</section>
-								
+
 		<section class="c-blue p-lg-5 text-white" style="padding: 10%;" id="report">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<h3>Jumlah Laporan</h3>
-						<h1 style="font-size: 12vh;">1.000.000</h1>
+						<h1 style="font-size: 12vh;"><?= number_format(jml_laporan(),0,"",".") ?></h1>
 					</div>
 				</div>
 			</div>
@@ -203,6 +224,7 @@
 
 
 		const flashDataWarning = $('.flash-data-warning').data('flashdata');
+		const flashDataSuccess = $('.flash-data-success').data('flashdata');
 		var Toast = Swal.mixin({
 			toast: false,
 			position: 'center',
@@ -214,6 +236,12 @@
 				icon: 'warning',
 				title: flashDataWarning,
 				footer: '<a href="<?= base_url() ?>/login">Login?</a>'
+			})
+		}
+		if (flashDataSuccess) {
+			Toast.fire({
+				icon: 'success',
+				title: flashDataSuccess,
 			})
 		}
 	</script>

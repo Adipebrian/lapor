@@ -1,8 +1,9 @@
 -perapihan data pengaduan//
 -register//
 -penambahan user admin dan superadmin//
--anonim
+-anonim//
 -add tujuan//
--review
--feedback
--laporan
+-review//
+-feedback//
+-laporan//
+-jenis pengaduan//

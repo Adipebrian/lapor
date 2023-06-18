@@ -50,6 +50,12 @@ function get_jurusan($id)
     $result = $db->table('tbjurusan')->where('kode', $id)->get()->getRow();
     return $result;
 }
+function jml_laporan()
+{
+    $db      = \Config\Database::connect();
+    $result = $db->table('tbreport')->select("count(noref) as jml")->get()->getRow()->jml;
+    return $result;
+}
 function jurusan(){
     $db      = \Config\Database::connect();
     $id =  user_id();

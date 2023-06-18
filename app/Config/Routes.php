@@ -93,8 +93,11 @@ $routes->group('user', ['filter' => 'role:user,admin'], static function ($routes
 });
 $routes->group('lapor', ['filter' => 'role:user,admin,agroindustri,manajemen-informatika,keperawatan,pemeliharaan-mesin'], static function ($routes) {
     $routes->get('data', 'Lapor::data');
-    $routes->post('store', 'Lapor::store');
+    $routes->get('laporan', 'Lapor::laporan');
 });
+$routes->post('store', 'Lapor::store');
+$routes->post('home/cek', 'Home::cek');
+$routes->post('home/cekk', 'Home::cek_action');
 
 
 /*
