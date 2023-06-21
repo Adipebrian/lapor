@@ -11,7 +11,7 @@
  Target Server Version : 100424
  File Encoding         : 65001
 
- Date: 18/06/2023 22:33:26
+ Date: 21/06/2023 22:33:55
 */
 
 SET NAMES utf8mb4;
@@ -119,7 +119,7 @@ CREATE TABLE `auth_logins`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `email`(`email`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 56 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of auth_logins
@@ -173,6 +173,12 @@ INSERT INTO `auth_logins` VALUES (46, '::1; Chrome', 'user1@user.com', 91, '2023
 INSERT INTO `auth_logins` VALUES (47, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-18 22:30:14', 1);
 INSERT INTO `auth_logins` VALUES (48, '::1; Chrome', 'admin3@admin.com', 89, '2023-06-18 22:31:03', 1);
 INSERT INTO `auth_logins` VALUES (49, '::1; Chrome', 'admin2@admin.com', 88, '2023-06-18 22:31:18', 1);
+INSERT INTO `auth_logins` VALUES (50, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-18 22:52:53', 1);
+INSERT INTO `auth_logins` VALUES (51, '::1; Chrome', 'admin1@admin.com', 87, '2023-06-21 22:24:36', 1);
+INSERT INTO `auth_logins` VALUES (52, '::1; Chrome', 'admin4@admin.com', 90, '2023-06-21 22:25:24', 1);
+INSERT INTO `auth_logins` VALUES (53, '::1; Chrome', 'admin3@admin.com', 89, '2023-06-21 22:27:14', 1);
+INSERT INTO `auth_logins` VALUES (54, '::1; Chrome', 'superadmin@admin.com', 1, '2023-06-21 22:29:30', 1);
+INSERT INTO `auth_logins` VALUES (55, '::1; Chrome', 'admin3@admin.com', 89, '2023-06-21 22:30:32', 1);
 
 -- ----------------------------
 -- Table structure for auth_permissions
@@ -262,8 +268,8 @@ CREATE TABLE `tbjurusan`  (
 -- ----------------------------
 INSERT INTO `tbjurusan` VALUES ('J1', 'Agroindustri\n');
 INSERT INTO `tbjurusan` VALUES ('J2', 'Manajemen Informatika');
-INSERT INTO `tbjurusan` VALUES ('J4', 'Keperawatan');
-INSERT INTO `tbjurusan` VALUES ('J5', 'Pemeliharaan Mesin');
+INSERT INTO `tbjurusan` VALUES ('J3', 'Keperawatan');
+INSERT INTO `tbjurusan` VALUES ('J4', 'Pemeliharaan Mesin');
 
 -- ----------------------------
 -- Table structure for tbreport
@@ -290,10 +296,6 @@ CREATE TABLE `tbreport`  (
 -- ----------------------------
 -- Records of tbreport
 -- ----------------------------
-INSERT INTO `tbreport` VALUES ('2023060001', 87, 'Jadwal Perkuliahan', 'Jadwal Perkuliahan Jurusan Manajemen Informatika', 'Informasi', 'J2', '2023-06-18', 'Kampus', '2023060001.jpeg', NULL, 0, '2023-06-18 22:17:02', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060002', 0, 'Jadwal Perkuliahan', 'Jadwal Perkuliahan Informatika', 'Informasi', 'J2', '2023-06-18', 'Kampus', '2023060002.jpeg', NULL, 1, '2023-06-18 22:20:56', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060003', 0, 'tes', 'tes', 'Aspirasi', 'J1', '2023-06-18', 'tes', '2023060003.jpeg', NULL, 1, '2023-06-18 22:24:17', NULL, NULL);
-INSERT INTO `tbreport` VALUES ('2023060004', 91, 'tes', 'tes', 'Aspirasi', 'J1', '2023-06-18', 'tes', '2023060004.jpeg', NULL, 0, '2023-06-18 22:25:51', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tbreport_d

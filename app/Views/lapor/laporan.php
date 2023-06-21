@@ -92,6 +92,7 @@
                                 </thead>
                                 <tbody>
                                     <?php $i = 1 ?>
+                                    <?php if($result): ?>
                                     <?php foreach ($result as $r) : ?>
                                         <tr>
                                             <td><?= $i++ ?></td>
@@ -116,6 +117,7 @@
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>

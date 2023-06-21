@@ -1,0 +1,19 @@
+CRITICAL - 2023-06-21 22:26:06 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\lapor\laporan.php on line 95.
+ 1 APPPATH\Views\lapor\laporan.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\lapor\\laporan.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\lapor\\laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('lapor/laporan', [], true)
+ 5 APPPATH\Controllers\Lapor.php(220): view('lapor/laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Lapor->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapor))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 22:30:53 --> syntax error, unexpected variable "$result"
+in APPPATH\Controllers\Lapor.php on line 30.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('lapor/data_admin')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('lapor/data_admin')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('lapor/data_admin')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()
