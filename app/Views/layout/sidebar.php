@@ -82,7 +82,7 @@
            </ul>
          </li>
 
-         <?php if(has_permission('admin-jurusan') || has_permission('manage-all')): ?>
+         <?php if(has_permission('admin-jurusan') || has_permission('manage-all') || has_permission('w-admin-jurusan')): ?>
          <li class="nav-header"><b>LAPORAN</b></li>
          <li class="nav-item  <?= ($uri->getSegment(1) == "lapor" && $uri->getSegment(2) == "laporan") ? 'menu-open' : '' ?>">
            <a href="#" class="nav-link <?= ($uri->getSegment(1) == "lapor" && $uri->getSegment(2) == "laporan") ? 'active' : '' ?>">

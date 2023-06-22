@@ -1,0 +1,36 @@
+CRITICAL - 2023-06-22 21:56:36 --> Switch statements may only contain one default clause
+in APPPATH\Helpers\lapor_helper.php on line 85.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-22 21:56:48 --> Switch statements may only contain one default clause
+in APPPATH\Helpers\lapor_helper.php on line 85.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-22 21:56:50 --> Switch statements may only contain one default clause
+in APPPATH\Helpers\lapor_helper.php on line 85.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-06-22 22:04:07 --> mysqli_sql_exception: Duplicate entry 'admin a kemahasiswaan' for key 'username' in C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:293
+Stack trace:
+#0 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(293): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\lapor\app\Controllers\Admin.php(171): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Admin->edit_user()
+#6 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\lapor\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\lapor\index.php(66): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-22 22:04:07 --> Duplicate entry 'admin a kemahasiswaan' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 293.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(293): mysqli->query('UPDATE `users` SET `email` = \'admin6@admin.com\', `username` = \'admin a kemahasiswaan\', `updated_at` = \'2023-06-22 22:04:07\'
+WHERE `id` = \'99\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(694): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `email` = \'admin6@admin.com\', `username` = \'admin a kemahasiswaan\', `updated_at` = \'2023-06-22 22:04:07\'
+WHERE `id` = \'99\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(621): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `email` = \'admin6@admin.com\', `username` = \'admin a kemahasiswaan\', `updated_at` = \'2023-06-22 22:04:07\'
+WHERE `id` = \'99\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `email` = :email:, `username` = :username:, `updated_at` = :updated_at:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Controllers\Admin.php(171): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->edit_user()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(66): CodeIgniter\CodeIgniter->run()

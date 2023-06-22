@@ -56,7 +56,8 @@ function jml_laporan()
     $result = $db->table('tbreport')->select("count(noref) as jml")->get()->getRow()->jml;
     return $result;
 }
-function jurusan(){
+function jurusan()
+{
     $db      = \Config\Database::connect();
     $id =  user_id();
     $builder = $db->table('auth_groups_users');
@@ -66,17 +67,29 @@ function jurusan(){
     $result = $builder->get()->getRow();
     $name = $result->name;
     switch ($name) {
-        case 'agroindustri':
+        case $name ==  'agroindustri' || $name == 'w-agroindustri':
             return "J1";
             break;
-        case 'manajemen-informatika':
+        case $name ==  'manajemen-informatika' || $name == 'w-manajemen-informatika':
             return "J2";
             break;
-        case 'keperawatan':
+        case $name ==  'keperawatan' || $name ==  'w-keperawatan':
             return "J3";
             break;
-        case 'pemeliharaan-mesin':
+        case $name ==  'pemeliharaan-mesin' || $name ==  'w-pemeliharaan-mesin':
             return "J4";
+            break;
+        case $name ==  'a-keuangan' || $name ==  'w-a-keuangan':
+            return "J5";
+            break;
+        case $name ==  'a-kemahasiswaan' || $name == 'w-a-kemahasiswaan':
+            return "J6";
+            break;
+        case $name ==  'a-umum' || $name ==  'w-a-umum':
+            return "J7";
+            break;
+        case $name ==  'upt-tik' || $name == 'w-upt-tik':
+            return "J8";
             break;
         default:
             return null;

@@ -45,7 +45,7 @@
                                     </div>
                                     <!-- /.input group -->
                                 </div>
-                                <?php if(!has_permission('admin-jurusan')): ?>
+                                <?php if(!has_permission('admin-jurusan') && !has_permission('w-admin-jurusan')): ?>
                                 <div class="form-group">
                                     <label>Pilih Tujuan</label>
                                     <select name="tujuan" id="tujuan" class="form-control" required>
