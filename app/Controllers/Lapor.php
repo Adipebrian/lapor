@@ -230,7 +230,7 @@ class Lapor extends BaseController
 
         $result = $this->db->table('tbreport')->where('tujuan', $tjn)->where('tgl >=', $tgl1)->where('tgl <=', $tgl2)->get()->getResult();
         $data = [
-            'title' => 'PT. Andalan Prima Indonesia | Data laporan Klaim',
+            'title' => 'Data Laporan',
             'uri' => $this->uri,
             'tgl' => $tgl,
             'tujuan' => $tujuan,
