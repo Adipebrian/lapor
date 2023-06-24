@@ -58,8 +58,10 @@
                                             <td>
                                                 <?php if ($r->sts == 0) : ?>
                                                     <span class="badge bg-secondary">Belum Dilihat</span>
-                                                <?php elseif ($r->sts == 1) : ?>
+                                                <?php elseif ($r->sts == 1&& jml_tanggapan($r->noref) < 0) : ?>
                                                     <span class="badge bg-success">Dilihat</span>
+                                                <?php elseif ($r->sts == 1 && jml_tanggapan($r->noref) > 0) : ?>
+                                                    <span class="badge bg-warning">Ditanggapi</span>
                                                 <?php endif; ?>
                                             </td>
                                             <td>
@@ -72,18 +74,6 @@
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Jenis Laporan</th>
-                                        <th>Pengirim</th>
-                                        <th>Judul</th>
-                                        <th>Lokasi</th>
-                                        <th>Tanggal</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <!-- /.card-body -->
