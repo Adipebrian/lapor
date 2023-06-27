@@ -58,7 +58,7 @@
                                             <td>
                                                 <?php if ($r->sts == 0) : ?>
                                                     <span class="badge bg-secondary">Belum Dilihat</span>
-                                                <?php elseif ($r->sts == 1&& jml_tanggapan($r->noref) < 0) : ?>
+                                                <?php elseif ($r->sts == 1 && jml_tanggapan($r->noref) <= 0) : ?>
                                                     <span class="badge bg-success">Dilihat</span>
                                                 <?php elseif ($r->sts == 1 && jml_tanggapan($r->noref) > 0) : ?>
                                                     <span class="badge bg-warning">Ditanggapi</span>

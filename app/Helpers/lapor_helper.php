@@ -59,7 +59,7 @@ function jml_laporan()
 function jml_tanggapan($noref)
 {
     $db      = \Config\Database::connect();
-    $result = $db->table('tbreport')->select("count(noref) as jml")->where('noref',$noref)->get()->getRow()->jml;
+    $result = $db->table('tbreport_d')->select("ifnull(count(noref),0) as jml")->where('noref',$noref)->get()->getRow()->jml;
     return $result;
 }
 function jurusan()
